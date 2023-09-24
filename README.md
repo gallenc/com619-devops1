@@ -32,7 +32,8 @@ In order to complete these exercises you will need Java 8 or 11, Netbeans 8 or 1
 
 Separate installation instructions have been provided as a powerpoint and a video if you don't have this software installed already.
 
-[Installing Software](../main/docs/Week1-installing-software.pdf) 
+[Installing Software](../main/docs/Week1-installing-software.pdf)
+
 [Installing Software Video](https://youtu.be/kyglZg2Ejts)
 (PS - dont worry about installing the easyUML plugin)
 

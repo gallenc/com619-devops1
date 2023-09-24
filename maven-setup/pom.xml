@@ -10,7 +10,7 @@
 
     <name>maven-setup</name>
     <!-- FIXME change it to the project's website -->
-    <url>https://github.com/gallenc/solent2Public/tree/master/maven-setup</url>
+    <url>https://github.com/gallenc/com619-devops1/tree/main/maven-setup</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

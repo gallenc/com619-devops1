@@ -5,36 +5,36 @@ Git Repository of java examples for Solent Students for COM619 devops
 The repository contains a number of example projects, weekly exercises and an area for you to create and store your own work during the course 'myPracticeCourseWork'. 
 Please read and follow the Getting Started instructions before doing anything else.
 
-[myPracticeCourseWork](../master/myPracticeCourseWork) This is where you should create and save your own practice projects.
+[myPracticeCourseWork](../main/myPracticeCourseWork) This is where you should create and save your own practice projects.
 
-[session1](../master/session1/) Initial exercises for the course.
+[session1](../main/session1/) Initial exercises for the course.
 
-[session2](../master/session2/) 
+[session2](../main/session2/) 
 
-[session3](../master/session3/) 
+[session3](../main/session3/) 
 
-[session4](../master/session4/) 
+[session4](../main/session4/) 
 
-[session5](../master/session5/) 
+[session5](../main/session5/) 
 
-[session6](../master/session6/) 
+[session6](../main/session6/) 
 
-[session7](../master/session7/) 
+[session7](../main/session7/) 
 
-[session8](../master/session8/) 
+[session8](../main/session8/) 
 
 ## Prerequisites
 In order to complete these exercises you will need Java 8 or 11, Netbeans 8 or 12, Tomcat, Maven and git installed on your machine. Seperate installation instructions have been provided if you dont have this software installed already.
 
-[maven-setup](../master/maven-setup) DEPRICATED: This contains scripts to help you set the java class path and temporarily install maven on university machines which dont support maven. 
-PLEASE NOTE that the university lab PC's should now have maven pre-installed so these steps in [maven-setup](../master/maven-setup) are not necessary on all machines. 
+[maven-setup](../main/maven-setup) DEPRICATED: This contains scripts to help you set the java class path and temporarily install maven on university machines which dont support maven. 
+PLEASE NOTE that the university lab PC's should now have maven pre-installed so these steps in [maven-setup](../main/maven-setup) are not necessary on all machines. 
 
 ## Getting Started with GIT
 Before doing anything else you will need to follow these getting started instructions.
 This will teach you a little bit about git and how to fork a copy of this repository into your own github account.
 
-You will then be able to clone your fork locally and then follow the instructions in the [maven-setup](../master/session1/maven-setup) project to get javac and maven working. 
-After this you can then proceed to doing the exercises in [session1](../master/session1/).
+You will then be able to clone your fork locally and then follow the instructions in the [maven-setup](../main/session1/maven-setup) project to get javac and maven working. 
+After this you can then proceed to doing the exercises in [session1](../main/session1/).
 
 ### Introduction to GIT
 To be a professional developer, you will need to become proficient at using version control systems.
@@ -64,10 +64,10 @@ git push (a command to push your latest commits up to the remote repository)
 
 ### IMPORTANT GitHub Security
 Github no longer accepts a simple username and password for accessing accounts. 
-Please see the page on [Github Security](../master/githubsecurity.md) to see how to set up certificates to access your github account from the university machines.
+Please see the page on [Github Security](../main/githubsecurity.md) to see how to set up certificates to access your github account from the university machines.
 
-### Forking the solent2Public repo
-You could just clone the master solent2Public repo and work on the clone locally. 
+### Forking the com619-devops1 repo
+You could just clone the master com619-devops1 repo and work on the clone locally. 
 However you do not have write permissions to this repo and so you couldn't save (or push) any changes or work you have added.
 Therefore, to be able to use the examples and save your own work, it will be better to create a copy (called a fork) of this repository in your own github account where you will be able to push and save your changes on line.
 
@@ -77,10 +77,10 @@ PLEASE NOTE, while github is very reliable, you should also keep a local backup 
 
 To create a fork of this repository
 1. sign in to your own github account
-2. navigate to this repository https://github.com/gallenc/solent2Public/
+2. navigate to this repository https://github.com/gallenc/com619-devops1/
 3. click the FORK icon
 
-![alt text](../master/docs/images/ForkingARepo.png "Figure ForkingARepo.png")
+![alt text](../main/docs/images/ForkingARepo.png "Figure ForkingARepo.png")
 
 you can understand the process by reading these documentation examples.
 https://help.github.com/articles/fork-a-repo/
@@ -91,37 +91,37 @@ Having forked the repository, go to your own github account and clone the reposi
 Rather than just clone the repository into a workspace on your IDE, it is good practice to create a separate folder on your local machine where you will clone your remote repositories. 
 You can import separate projects from this clone into your IDE workspace as you need to work on them.
 
-Create a git repo folder on your local drive and clone your fork of solent2Public into it.
+Create a git repo folder on your local drive and clone your fork of com619-devops1 into it.
 
 DO NOT check out your repository onto a network (e.g. U:) drive or a One Drive location. 
 The time latency in these drives can cause git to fail.
 
-I usually create a git repository close the the root of the C: drive (e.g. C:/devel/gitrepos/solent2Public)
+I usually create a git repository close the the root of the C: drive (e.g. C:/devel/gitrepos/com619-devops1)
 
 ```
 mkdir gitrepos
 cd gitrepos
-git clone https://github.com/ {your github id }/solent2Public.git
+git clone https://github.com/ {your github id }/com619-devops1.git
 ```
 Important:  if using SSH keys use
 ```
-git clone  git@github.com:{your github id }/solent2Public.git
+git clone  git@github.com:{your github id }/com619-devops1.git
 ```
 
 You should now have a clone of your fork in your gitrepos directory
-gitrepos/solent2Public
+gitrepos/com619-devops1
 
 You can see how to open projects in this repo using the Netbeans IDE in the exercises under
 
-[maven-test-exercise](../master/session1/maven-test-exercise)
+[maven-test-exercise](../main/session1/maven-test-exercise)
 
 ### hidden files .git and .gitignore
 You should set the view on your windows file explorer to show hidden files and file extensions. 
 This will allow you to see git and IDE specific files which are otherwise hidden.
 
-In particular, you will see that the top level folder solent2Public contains a .git folder.
+In particular, you will see that the top level folder com619-devops1 contains a .git folder.
 This is where git stores all of the branches versions and changes to your repository. 
-The rest of the files under solent2Public are the currently checked out versions of your code.
+The rest of the files under com619-devops1 are the currently checked out versions of your code.
 
 You will also notice that many of the projects in this repo have a .gitignore file.
 This tells git to ignore certain directories or files when committing changes.
@@ -131,7 +131,7 @@ It is VERY important to ensure that, in particular 'target', directories are NOT
 
 You should also ensure that in most cases IDE specific sub folders and files are not checked in to git as this will cause confusion if you change or upgrade your IDE. Your ide will read the maven pom.xml file and recreate these folders locally if necessary.
 
-The example [.gitignore](../master/.gitignore)  should be suitable for most purposes and should be copied into the top level of your git repository.
+The example [.gitignore](../main/.gitignore)  should be suitable for most purposes and should be copied into the top level of your git repository.
 
 ### Syncing with the upstream repo
 I will be adding stuff to the upstream repo each week and you should be able to pull these into your local repo using the procedure described below.
@@ -142,57 +142,57 @@ PLEASE DO NOT CHANGE ANYTHING IN YOUR LOCAL REPO EXCEPT IN myPracticeCourseWork.
 you can see which remote repositories are referenced in your local repo using
 ```
 $ git remote -v
-origin  https://github.com/{ your github id}/solent2Public.git (fetch)
-origin  https://github.com/{ your github id}/solent2Public.git (push)
+origin  https://github.com/{ your github id}/com619-devops1.git (fetch)
+origin  https://github.com/{ your github id}/com619-devops1.git (push)
 ```
 if you are using SSH keys this will be
 ```
 $ git remote -v
-origin  git@github.com:{ your github id}/solent2Public.git (fetch)
-origin  git@github.com:{ your github id}/solent2Public.git (push)
+origin  git@github.com:{ your github id}/com619-devops1.git (fetch)
+origin  git@github.com:{ your github id}/com619-devops1.git (push)
 ```
 
 To sync with the upstream repo you need to add another remote repository
 ```
-$ git remote add upstream https://github.com/gallenc/solent2Public.git
+$ git remote add upstream https://github.com/gallenc/com619-devops1.git
 ```
 NOTE even if you are using SSH to acces your repo, use https to access the upstream repo because you do not need a password or certificates to pull a public repo.
 
 To see the upstream repositories use
 ```
 $ git remote -v
-origin  https://github.com/{ your github id}/solent2Public.git (fetch)
-origin  https://github.com/{ your github id}/solent2Public.git (push)
-upstream        https://github.com/gallenc/solent2Public.git (fetch)
-upstream        https://github.com/gallenc/solent2Public.git (push)
+origin  https://github.com/{ your github id}/com619-devops1.git (fetch)
+origin  https://github.com/{ your github id}/com619-devops1.git (push)
+upstream        https://github.com/gallenc/com619-devops1.git (fetch)
+upstream        https://github.com/gallenc/com619-devops1.git (push)
 ```
 if you are using SSH this will be
 ```
 $ git remote -v
-origin  git@github.com:{ your github id}/solent2Public.git (fetch)
-origin  git@github.com:{ your github id}/solent2Public.git (push)
-upstream        https://github.com/gallenc/solent2Public.git (fetch)
-upstream        https://github.com/gallenc/solent2Public.git (push)
+origin  git@github.com:{ your github id}/com619-devops1.git (fetch)
+origin  git@github.com:{ your github id}/com619-devops1.git (push)
+upstream        https://github.com/gallenc/com619-devops1.git (fetch)
+upstream        https://github.com/gallenc/com619-devops1.git (push)
 ```
 
 Note that git calls the github repository which your repository is linked to 'origin'.
 This is the respository on github where where push commands normally send the changes.
 The 'upstream' repository is an alternative repository from which you pull additional content for merging with your work.
 
-Having made these changes you can now keep your own fork of solent2Public synced with the class examples in the upstream repository using a few Git commands.
+Having made these changes you can now keep your own fork of com619-devops1 synced with the class examples in the upstream repository using a few Git commands.
 
 1. Fetch the branches and their respective commits from the upstream repository. 
 Commits to master will be stored in a local branch, upstream/master.
 ```
 git fetch upstream
-From https://github.com/gallenc/solent2Public
+From https://github.com/gallenc/com619-devops1
  * [new branch]      master     -> upstream/master
 remote: Enumerating objects: 18, done.
 remote: Counting objects: 100% (18/18), done.
 remote: Compressing objects: 100% (7/7), done.
 remote: Total 12 (delta 3), reused 12 (delta 3), pack-reused 0
 Unpacking objects: 100% (12/12), done.
-From https://github.com/gallenc/solent2Public
+From https://github.com/gallenc/com619-devops1
    ddd9643..bd85c0d  master     -> upstream/master
 ```
 
@@ -234,7 +234,7 @@ Compressing objects: 100% (10/10), done.
 Writing objects: 100% (12/12), 44.69 KiB | 0 bytes/s, done.
 Total 12 (delta 3), reused 0 (delta 0)
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-To https://github.com/gallenc-test/solent2Public.git
+To https://github.com/gallenc-test/com619-devops1.git
    ddd9643..bd85c0d  master -> master
 
 git status
@@ -249,7 +249,7 @@ To synchronise your repository with the upstream use the following commands
 
 If you have not set up the upstream repo
 ```
-git remote add upstream https://github.com/gallenc/solent2Public.git
+git remote add upstream https://github.com/gallenc/com619-devops1.git
 ```
 Once the upstream is set use
 

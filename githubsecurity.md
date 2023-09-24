@@ -38,7 +38,7 @@ git clone git@github.com/username/repo.git
 ```
 To check out your repository you can use the SSH link found in your repository page.
 
-![alt text](../master/docs/images/git3.png "Figure git3.png" )
+![alt text](../main/docs/images/git3.png "Figure git3.png" )
 
 ### using ssh certificates
 
@@ -46,7 +46,7 @@ On a windows machine with GIT installed, you can generate your certificates as f
 
 1. Right click in an empty folder and select git bash to get a terminal window
 
-![alt text](../master/docs/images/git1.png "Figure git1.png" )
+![alt text](../main/docs/images/git1.png "Figure git1.png" )
 
 2. generate your certificate using the following command
 ```
@@ -90,7 +90,7 @@ Select 'add new SSH key'
 
 You can then open the id_ed25519.pub key file on your local machine using notepad and copy and paste the contents into github
 
-![alt text](../master/docs/images/git2.png "Figure git2.png" )
+![alt text](../main/docs/images/git2.png "Figure git2.png" )
 
 3. Test your connection
 

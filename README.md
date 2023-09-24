@@ -2,7 +2,8 @@
 Git Repository of java examples for Solent Students for COM619 devops
 
 ## Contents
-The repository contains a number of example projects, weekly exercises and an area for you to create and store your own work during the course 'myPracticeCourseWork'. 
+The repository contains a number of example projects, weekly exercises and an area called 'myPracticeCourseWork' for you to create and store your own example work during the course. 
+
 Please read and follow the Getting Started instructions before doing anything else.
 
 [myPracticeCourseWork](../main/myPracticeCourseWork) This is where you should create and save your own practice projects.
@@ -23,14 +24,27 @@ Please read and follow the Getting Started instructions before doing anything el
 
 [session8](../main/session8/) 
 
+# Getting Started
+Before doing anything else you will need to follow these getting started instructions.
+
 ## Prerequisites
-In order to complete these exercises you will need Java 8 or 11, Netbeans 8 or 12, Tomcat, Maven and git installed on your machine. Seperate installation instructions have been provided if you dont have this software installed already.
+In order to complete these exercises you will need Java 8 or 11, Netbeans 8 or 12, Tomcat, Maven and git installed on your machine. 
+
+Separate installation instructions have been provided as a powerpoint and a video if you don't have this software installed already.
+
+[Installing Software](../main/docs/Week1-installing-software.pdf) 
+[Installing Software Video](https://youtu.be/kyglZg2Ejts)
+(PS - dont worry about installing the easyUML plugin)
+
+You will also need docker and docker-compose for the containerisation exercies. 
+The easiest way to get these packages is to install [docker-desktop](https://www.docker.com/products/docker-desktop/) which is available for Windows, Mac or Linux machines. 
+Please note that due to security constraints, docker cannot be run on the university lab machines so you will need to install docker on your own laptop and/or use docker-compose and docker on a cloud hosted machine
 
 [maven-setup](../main/maven-setup) DEPRICATED: This contains scripts to help you set the java class path and temporarily install maven on university machines which dont support maven. 
 PLEASE NOTE that the university lab PC's should now have maven pre-installed so these steps in [maven-setup](../main/maven-setup) are not necessary on all machines. 
 
 ## Getting Started with GIT
-Before doing anything else you will need to follow these getting started instructions.
+
 This will teach you a little bit about git and how to fork a copy of this repository into your own github account.
 
 You will then be able to clone your fork locally and then follow the instructions in the [maven-setup](../main/session1/maven-setup) project to get javac and maven working. 

@@ -1,14 +1,16 @@
 # com619-devops1
 Git Repository of java examples for Solent Students for COM619 devops
 
+A project plan and roadmap for this project is provided here.
+
+[com619 Project Plan](https://github.com/users/gallenc/projects/3/views/1)
+
 ## Contents
 The repository contains a number of example projects, weekly exercises and an area called 'myPracticeCourseWork' for you to create and store your own example work during the course. 
 
 Please read and follow the Getting Started instructions before doing anything else.
 
-[myPracticeCourseWork](../main/myPracticeCourseWork) This is where you should create and save your own practice projects.
-
-[session1](../main/session1/) Initial exercises for the course.
+[session1](../main/session1/) Recap on Java and initial exercises for the course.
 
 [session2](../main/session2/) 
 
@@ -24,13 +26,16 @@ Please read and follow the Getting Started instructions before doing anything el
 
 [session8](../main/session8/) 
 
+[myPracticeCourseWork](../main/myPracticeCourseWork) This is where you should create and save your own practice projects.
+
 # Getting Started
-Before doing anything else you will need to follow these getting started instructions.
+Before doing anything else you will need to follow these getting started instructions to install the required software.
 
 ## Prerequisites
 In order to complete these exercises you will need Java 8 or 11, Netbeans 8 or 12, Tomcat, Maven and git installed on your machine. 
+(You can use other IDE's if you wish but only Netbeans is available at the university).
 
-Separate installation instructions have been provided as a powerpoint and a video if you don't have this software installed already.
+Separate basic installation instructions have been provided as a powerpoint and a video if you don't have this software installed already.
 
 [Installing Software](../main/docs/Week1-installing-software.pdf)
 

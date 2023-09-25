@@ -23,7 +23,7 @@ mvn cargo:run
 After a short time you should be able to browse to the application at 
 [http://localhost:8080/webExercise1/](http://localhost:8080/webExercise1/)
 
-# running example in docker using docker-compose
+# Running example in docker using docker-compose
 
 A [docker-compose](../session1/com528-web/webExercise1/docker-compose) file has also been provided to allow you to run this example in Docker.
 
@@ -46,4 +46,7 @@ The application will be browseable at
 
 [http://localhost:8080/](http://localhost:8080/)
 
+# Set up an azure server and run the same example there
+
+Instructions for setting up a Microsoft Azure server and installing needed software are at [Server Setup](../session1/serverSetup.md)
 

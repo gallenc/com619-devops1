@@ -141,12 +141,12 @@ fail2ban prevents multiple attempts to log in with SSH.
 # installing fail2ban starts firewalld which doesnt work with docker by default. You need to add the following changes
 
 # install rules to allow 8080 port through firewall
+# see firewalld documentation https://docs.rockylinux.org/books/lxd_server/04-firewall/
 sudo firewall-cmd --zone=public --add-port=8080/tcp  --permanent
 sudo firewall-cmd --reload
 
 # stop docker and set up to use firewall which support fail2ban
 sudo systemctl stop docker
-
 
 # install firewall rules to allow docker to work with firewalld
 # see https://www.reddit.com/r/RockyLinux/comments/zw4pcu/docker_firewalld/?rdt=60462

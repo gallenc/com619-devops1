@@ -1,0 +1,9 @@
+version: "3.2"
+
+services: 
+    restsimulator :
+        image: jetty:9.4-jre11
+        ports: 
+        - "8080:8080"
+        volumes:
+        - ./target/webExercise1-0.1-SNAPSHOT.war:/var/lib/jetty/webapps/root.war

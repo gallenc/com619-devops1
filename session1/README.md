@@ -104,7 +104,7 @@ mvn -version
  Java version: 11.0.20, vendor: Red Hat, Inc., runtime: /usr/lib/jvm/java-11-openjdk-11.0.20.0.8-3.el8_8.x86_64
 
 ```
-#docker and docker-compose
+# docker and docker-compose
 
 ```
 # add docker and docker-compose
@@ -126,6 +126,23 @@ sudo systemctl status docker
 
 docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+# restart your whole server and see if you can log in
+sudo shutdown -r now
+
+You should now be able to clone the repo and run the docker compose command to run the example discussed above
+```
+
+# optional - install fail2ban
+fail2ban prevents multiple attempts to log in with SSH. 
+ see https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-rocky-linux-9
+
+```
+# installing fail2ban starts firewalld which doesnt work with docker by default. You need to add the following changes
+
+# install rules to allow 8080 port through firewall
+sudo firewall-cmd --zone=public --add-port=8080/tcp  --permanent
+sudo firewall-cmd --reload
 
 # stop docker and set up to use firewall which support fail2ban
 sudo systemctl stop docker
@@ -151,14 +168,6 @@ sudo nano /etc/systemd/system/multi-user.target.wants/docker.service
 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --iptables=false
 
 sudo systemctl start docker
-
-# install rules to allow 8080 port through firewall
-sudo firewall-cmd --zone=public --add-port=8080/tcp  --permanent
-sudo firewall-cmd --reload
-
-
-# optional - install fail2ban
-# see https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-rocky-linux-9
 
 # restart your whole server and see if you can log in
 sudo shutdown -r now

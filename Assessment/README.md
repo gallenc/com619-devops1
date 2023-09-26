@@ -2,7 +2,7 @@
 
 ## Devops module descriptor
 
-[COM619 DevOps.pdf](../Assessment/COM619 DevOps.pdf)
+[COM619-DevOps.pdf](../Assessment/COM619-DevOps.pdf)
 
 
 ## Assessment AE1 - Presentation and code

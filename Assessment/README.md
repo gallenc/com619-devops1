@@ -18,4 +18,6 @@ To be submitted 2nd week January - Date TBD
 
 ## Application Requirements
 
-The basic requirements for your assessment application are documented in [Application Requirements](../Assessment/requirements.md)
+The non functional requirements for your work are described in the assessment criteria.
+
+The basic functional requirements for your assessment application are documented in [Application Requirements](../Assessment/requirements.md)

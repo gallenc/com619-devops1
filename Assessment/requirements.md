@@ -4,10 +4,13 @@ You are required to create a hosted application which allows users to upload geo
 Descriptions may also include a photo of the location.
 The hosted application will display each point on an open street map derived map. Users who click on the points on the map will see a description of the location and a photo of the location if one was uploaded. 
 
-![alt text](../Assesssment/mapleaflet.png "Figure mapleaflet.png" )
+![alt text](../Assessment/mapleaflet.png "Figure mapleaflet.png" )
 
 Note - the primary objective of this exercise is to demonstrate a simple microservice using ReST and web technology.
 The prettiness of the UI/UX design is not a primary criteria for evaluation.
+
+You should prioritise the features listed and decide which ones to attempt in your three sprints.
+You may not be able to implement  all of the features in the time available but each sprint should demonstrate a working set of features. 
 
 ## Back end Server code
 

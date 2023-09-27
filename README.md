@@ -50,8 +50,8 @@ You will also need docker and docker-compose for the containerisation exercies.
 The easiest way to get these packages is to install [docker-desktop](https://www.docker.com/products/docker-desktop/) which is available for Windows, Mac or Linux machines. 
 Please note that due to security constraints, docker cannot be run on the university lab machines so you will need to install docker on your own laptop and/or use docker-compose and docker on a cloud hosted machine
 
-[maven-setup](../main/maven-setup) DEPRICATED: This contains scripts to help you set the java class path and temporarily install maven on university machines which dont support maven. 
-PLEASE NOTE that the university lab PC's should now have maven pre-installed so these steps in [maven-setup](../main/maven-setup) are not necessary on all machines. 
+
+PLEASE NOTE that the university lab PC's should now have maven pre-installed however if it is not installed, you can use the [maven wrapper](https://maven.apache.org/wrapper/index.html) which is documented in [webExercise1](../main/session1/com528-web/webExercise1)
 
 ## Getting Started with GIT
 

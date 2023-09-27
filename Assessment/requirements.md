@@ -10,21 +10,23 @@ Note - the primary objective of this exercise is to demonstrate a simple microse
 The prettiness of the UI/UX design is not a primary criteria for evaluation.
 
 You should prioritise the features listed and decide which ones to attempt in your three sprints.
-You may not be able to implement  all of the features in the time available but each sprint should demonstrate a working set of features. 
+You may not be able to implement all of the features in the time available but each sprint should demonstrate a working set of features. 
+
+You should also provide a simple test plan which demonstrates testing of features at each sprint.
 
 ## Back end Server code
 
 | Requirement | Description |        |
 | ----------- | ----------- | ------ |
 | 1 | the application will be secured with https using correct certificates |   |
-| 1 | ReST api's will be documented using openAPI (swagger) |   |
-| 1 | all dynamic data will be stored in a database |   |
-| 1 | the application will support internationalisation i18n |   |
-| 1 | user documentation will be included on the hosted site |   |
-| 1 | the site will respect GPDR guidelines |   |
-| 1 | the backend server will be hosted in the cloud and use container technology (docker) |   |
-| 1 | user authentication will authenticate access to upload to the app |   |
-| 1 | the app will support user and administrator roles and the signing up of new users |   |
+| 2 | ReST api's will be documented using openAPI (swagger) |   |
+| 3 | all dynamic data will be stored in a database |   |
+| 4 | the application will support internationalisation i18n |   |
+| 5 | user documentation will be included on the hosted site |   |
+| 6 | the site will respect GPDR guidelines |   |
+| 7 | the backend server will be hosted in the cloud and use container technology (docker) |   |
+| 8 | user authentication will authenticate access to upload to the app |   |
+| 9 | the app will support user and administrator roles and the signing up of new users |   |
 
 
 ## Client code
@@ -35,6 +37,6 @@ However it is also acceptable to use a web page which renders on the mobile devi
 | Requirement | Description |        |
 | ----------- | ----------- | ------ |
 | 1 | it shall be possible to use the application from a mobile device  |   |
-| 1 | the web site will render on a mobile and desktop screen (responsive)  |   |
-| 1 | the mobile client will include code to upload geolocation provided by the device  |   |
-| 1 | The remote client must authenticate itself and use the ReST api to communicate with the hosted server. |   |
+| 2 | the web site will render on a mobile and desktop screen (responsive)  |   |
+| 3 | the mobile client will include code to upload geolocation provided by the device  |   |
+| 4 | The remote client must authenticate itself and use the ReST api to communicate with the hosted server. |   |

@@ -1,9 +1,13 @@
 # com619-devops1
 Git Repository of java examples for Solent Students for COM619 devops
 
-A project plan and roadmap for this project is provided here.
+A project plan and roadmap for this module material is provided here.
 
 [com619 Project Plan](https://github.com/users/gallenc/projects/3/views/1)
+
+## Assessment
+Assessment criteria and application requirements are provided under [Assessment](../main/Assessment/)
+Please note that these are provisional and although unlikely to change, any assessment on Solent Online Learning will take precedence.
 
 ## Contents
 The repository contains a number of example projects, weekly exercises and an area called 'myPracticeCourseWork' for you to create and store your own example work during the course. 

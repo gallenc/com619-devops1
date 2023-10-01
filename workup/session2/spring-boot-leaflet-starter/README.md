@@ -10,7 +10,18 @@ changes:
 
 1. migrated to spring 5
 1. moved from leaflet to JSP
-1. data changed to use HSQLDB and not mysql
+1. data changed to use HSQLDB and not mysql for testing
+1. added openapi annotations
+
+## to run
+
+```
+mvn clean install
+
+mvn spring-boot:run
+```
+
+UI is at http://localhost:8080/
 
 
 ## open api annotations

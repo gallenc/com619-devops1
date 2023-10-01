@@ -1,4 +1,4 @@
-package net.map.controller;
+package org.solent.spring.map.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ public class PageController {
 
     @RequestMapping("/")
     public String homePage(){
-        return "index";
+        return "LeafletJsp";
     }
 
 }

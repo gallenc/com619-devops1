@@ -1,7 +1,7 @@
-package net.map;
+package org.solent.spring.map;
 
-import net.map.domain.MapPoint;
-import net.map.repository.MapPointRepository;
+import org.solent.spring.map.model.MapPoint;
+import org.solent.spring.map.repository.MapPointRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

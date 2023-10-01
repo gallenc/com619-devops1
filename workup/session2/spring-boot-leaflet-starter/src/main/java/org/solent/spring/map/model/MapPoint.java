@@ -1,4 +1,4 @@
-package net.map.domain;
+package org.solent.spring.map.model;
 
 
 import javax.persistence.Entity;

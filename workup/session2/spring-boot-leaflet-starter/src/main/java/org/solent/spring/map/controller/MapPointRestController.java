@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.Parameter;
  * Created by pingwin on 25.10.16.
  */
 @RestController
-public class MapPointController {
+public class MapPointRestController {
 	
 	
     @Autowired

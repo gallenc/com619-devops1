@@ -18,12 +18,12 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Leaflet library import-->
-    <link rel="stylesheet" type="text/css" href="../css/leaflet.css" />
-    <link rel="stylesheet" type="text/css" href="../css/leaflet-loader.css" />
-    <script type='text/javascript' src='../js/jquery.min.js'></script>
-    <script type='text/javascript' src='../js/leaflet.js'></script>
-    <script type='text/javascript' src='../js/leaflet-loader.js'></script>
-    <script type='text/javascript' src='../js/leaflet-layerjson.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="./css/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="./css/leaflet-loader.css" />
+    <script type='text/javascript' src='./js/jquery.min.js'></script>
+    <script type='text/javascript' src='./js/leaflet.js'></script>
+    <script type='text/javascript' src='./js/leaflet-loader.js'></script>
+    <script type='text/javascript' src='./js/leaflet-layerjson.min.js'></script>
     <!-- -->
 
 </head>
@@ -76,8 +76,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
 <!-- Our JS map script importing-->
-<script type='text/javascript' src='../js/map/map.js'></script>
-<script type='text/javascript' src='../js/map/markers.js'></script>
+<script type='text/javascript' src='./js/map/map.js'></script>
+<script type='text/javascript' src='./js/map/markers.js'></script>
 <!-- -->
 </body>
 </html>

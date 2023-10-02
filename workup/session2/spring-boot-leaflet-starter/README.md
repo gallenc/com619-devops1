@@ -1,8 +1,11 @@
 # Example map application
 
 ## overview
-This example application is designed to show how spring-boot can be used to create a simple web application with a map. 
-This will give you insights and a starting point for most of the things you will need to do in your group project
+This example application is designed to show how spring-boot can be used to create a simple web application with a map and points.
+
+![alt text](../spring-boot-leaflet-starter/docs/MapApp.png "Figure MapApp.png")
+
+This example will give you insights and a starting point for most of the things you will need to do in your group project
 
 Features:
 1. Spring MVC used with JSP to initialise map

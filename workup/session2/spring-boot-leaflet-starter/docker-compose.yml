@@ -9,10 +9,3 @@ services:
         volumes:
         - ./target/spring-boot-leaflet-starter-0.0.1-SNAPSHOT.war:/var/lib/jetty/webapps/root.war
 
-# alternative using tomcat - note that this map has problems accessing the ReST api 
-# because the app is named after war at http://localhost:8080/root
-#        image: tomcat:9.0.80-jdk11-corretto
-#        ports: 
-#        - "8080:8080"
-#        volumes:
-#        - ./target/spring-boot-leaflet-starter-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/root.war

@@ -31,6 +31,9 @@
       <!-- needed by Hibernate for java 11 -->
       <javassist.version>3.27.0-GA</javassist.version>
       <cglib-nodep.version>3.2.12</cglib-nodep.version>
+
+      <!-- cargo -->
+      <cargo.plugin.version>1.10.9</cargo.plugin.version>
    </properties>
 
    <dependencies>
@@ -178,7 +181,49 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
          </plugin>
+
+         <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven3-plugin</artifactId>
+            <version>${cargo.plugin.version}</version>
+            <configuration>
+               <container>
+                  <containerId>jetty9x</containerId>
+                  <type>remote</type>
+               </container>
+
+               <configuration>
+                  <type>runtime</type>
+                  <properties>
+                     <cargo.hostname>127.0.0.1</cargo.hostname>
+                     <cargo.servlet.port>8080</cargo.servlet.port>
+                     <cargo.protocol>http</cargo.protocol>
+                     <cargo.remote.username>someusername</cargo.remote.username>
+                     <cargo.remote.password>somepassword</cargo.remote.password>
+                  </properties>
+               </configuration>
+
+               <deployer>
+                  <type>remote</type>
+               </deployer>
+
+               <deployables>
+                  <deployable>
+                     <groupId>${project.groupId}</groupId>
+                     <artifactId>${project.artifactId}</artifactId>
+                     <type>war</type>
+                     <properties>
+                        <context>/</context>
+                     </properties>
+                  </deployable>
+               </deployables>
+            </configuration>
+         </plugin>
+
+
       </plugins>
+
+
    </build>
 
 

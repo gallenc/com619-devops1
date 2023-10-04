@@ -29,6 +29,13 @@ Docker-jetty-cargo - https://github.com/mthenw/docker-jetty-cargo/  Note my exam
 
 Deploying Web Applications in Jetty  https://www.baeldung.com/deploy-to-jetty 
 
+You might also want to look at using letsencrypt with docker:
+
+example nginx letsencrypt: https://github.com/wmnnd/nginx-certbot
+related tutorial: https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
+
+related tutorial :
+
 ## details
 InteractiveMapSpringBoot
 

@@ -7,7 +7,9 @@ A project plan and roadmap for this module material is provided here.
 
 ## Assessment
 Assessment criteria and application requirements are provided under [Assessment](../main/Assessment/)
-Please note that these are provisional and although unlikely to change, any assessment on Solent Online Learning will take precedence.
+Please note that these are provisional and although unlikely to change, any assessment on Solent Online Learning will take precedence. 
+
+Details of your team allocation are also in this folder.
 
 ## Contents
 The repository contains a number of example projects, weekly exercises and an area called 'myPracticeCourseWork' for you to create and store your own example work during the course. 
@@ -16,7 +18,7 @@ Please read and follow the Getting Started instructions before doing anything el
 
 [session1](../main/session1/) Recap on Java and initial exercises for the course.
 
-[session2](../main/session2/) 
+[session2](../main/session2/) Introduction to Spring, leaflet and deploying using cargo. 
 
 [session3](../main/session3/) 
 

@@ -4,6 +4,8 @@ In this session we are going to look at how Spring MVC can be used to create a s
 
 [userManagementExample-web](../session3/userManagementExample-web)
 
+This session is accompanied by a video [COM619 Session 3](https://youtu.be/v3XppCqvH5c)
+
 You will need to be able to create and manage users for your map application so this will give you a starting point. 
 
 Note that this example is quite simple but it does show you how to do simple CRUD (Create, Retrieve, Update, Delete ) operations on a user. 

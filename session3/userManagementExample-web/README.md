@@ -1,6 +1,8 @@
 
 # User Management example
 
+This session is accompanies by a video [COM619 Session 3](https://youtu.be/v3XppCqvH5c)
+
 # Introduction
 
 This is a simple user management application which shows how to create and update a set of user accounts with a password.
@@ -10,6 +12,10 @@ Users can self-register to use the application but only the system administrator
 
 You can see the user information in the model package, Users have an Address, a Username and Password. 
 A UserRepository is used to persist users to the database
+
+The UserAndloginController does hte work of managing the user data and controlling the user update JSP's.
+Note the use of @Transaction on the user update methods. 
+This means that the user will be atomically updated within a database transaction.
 
 The PasswordUtils class is used to hash the password using a library called BCrypt.
 Only the hash of the password is stored in the database.

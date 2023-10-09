@@ -204,6 +204,7 @@
       <dependency>
          <groupId>javax.servlet</groupId>
          <artifactId>jstl</artifactId>
+          <scope>provided</scope>
       </dependency>
 
       <!-- hashing library for password -->

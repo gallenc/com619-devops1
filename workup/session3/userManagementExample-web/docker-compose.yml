@@ -1,0 +1,11 @@
+version: "3.2"
+
+services: 
+    # http://localhost:8080/
+    restsimulator :
+        image: jetty:9.4-jre11
+        ports: 
+        - "8080:8080"
+        volumes:
+        - ./target/userManagementExample-web-0.1-SNAPSHOT.war:/var/lib/jetty/webapps/root.war
+

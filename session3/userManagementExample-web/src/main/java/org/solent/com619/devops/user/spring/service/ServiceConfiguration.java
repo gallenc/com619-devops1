@@ -22,9 +22,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 
-@ComponentScan(basePackages = {"org.solent.com619.devops.user.service",
-    "org.solent.com619.devops.user.spring.service"
-})
+@ComponentScan(basePackages = {"org.solent.com619.devops.user.spring.service"})
 @Import({PersistenceJPAConfig.class})
 public class ServiceConfiguration {
 

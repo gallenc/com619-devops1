@@ -5,8 +5,8 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page import="org.solent.com504.oodd.cart.model.dto.User"%>
-<%@page import="org.solent.com504.oodd.cart.model.dto.UserRole"%>
+<%@page import="org.solent.com619.devops.user.model.dto.User"%>
+<%@page import="org.solent.com619.devops.user.model.dto.UserRole"%>
 <c:set var = "selectedPage" value = "users" scope="request"/>
 <jsp:include page="header.jsp" />
 

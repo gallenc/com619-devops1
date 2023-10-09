@@ -1,7 +1,7 @@
 
 # User Management example
 
-This session is accompanies by a video [COM619 Session 3](https://youtu.be/v3XppCqvH5c)
+This session is accompanied by a video [COM619 Session 3](https://youtu.be/v3XppCqvH5c)
 
 # Introduction
 

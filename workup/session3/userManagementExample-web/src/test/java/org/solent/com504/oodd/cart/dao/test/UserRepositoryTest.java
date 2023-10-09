@@ -13,8 +13,6 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
-import org.solent.com504.oodd.cart.dao.impl.InvoiceRepository;
-import org.solent.com504.oodd.cart.dao.impl.ShoppingItemCatalogRepository;
 import org.solent.com504.oodd.cart.model.dto.User;
 import org.solent.com504.oodd.cart.dao.impl.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +35,6 @@ public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private ShoppingItemCatalogRepository shoppingItemCatalogRepository;
-
-    @Autowired
-    private InvoiceRepository invoiceRepository;
 
     @Test
     public void testUser() {

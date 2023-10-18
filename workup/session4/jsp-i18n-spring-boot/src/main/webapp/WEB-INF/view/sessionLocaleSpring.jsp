@@ -4,20 +4,20 @@
 <%@ page isELIgnored="false" %>
 <%@ page session="true" %>
 
-<fmt:setLocale value="${cookie['lang'].value}"/>
+<fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
 
-<html lang="${cookie['lang'].value}">
+<html lang="${sessionScope.lang}">
 <head>
     <title>PhraseApp - i18n</title>
 </head>
 <body>
-    <h2>simple jsp - not spring</h2>
+    <h2>Spring MVC JSP</h2>
 	<h2>
 		<fmt:message key="label.welcome" />
 	</h2>
-	<p><fmt:message key="label.cookieLocaleContent" /></p>
+	<p><fmt:message key="label.sessionLocaleContent" /></p>
 	
-	<button><a href="changeLocale.jsp"><fmt:message key="label.back" /></a></button>
+	<button><a href="changeLocale"><fmt:message key="label.back" /></a></button>
 </body>
 </html>

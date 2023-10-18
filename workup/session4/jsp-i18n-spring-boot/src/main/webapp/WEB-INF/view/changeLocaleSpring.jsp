@@ -11,7 +11,7 @@
     <title>PhraseApp - i18n</title>
 </head>
 <body>
-    <h2>simple jsp - not spring</h2>
+    <h2>Spring MVC JSP</h2>
 	<h2>
 		<fmt:message key="label.chooseSessionLocale" />
 	</h2>
@@ -23,7 +23,7 @@
 	</ul>
 	<c:if test="${not empty param.sessionLocale}">
 		<fmt:message key="label.cookieChangeSuccess" />
-		<button><a href="sessionLocale.jsp"><fmt:message key="label.viewPage" /></a></button>
+		<button><a href="sessionLocale"><fmt:message key="label.viewPage" /></a></button>
 	</c:if>
 	
 	<h2>
@@ -37,7 +37,7 @@
 	</ul>
 	<c:if test="${not empty param.cookieLocale}">
 		<fmt:message key="label.cookieChangeSuccess" />
-		<button><a href="cookieLocale.jsp"><fmt:message key="label.viewPage" /></a></button>
+		<button><a href="cookieLocale"><fmt:message key="label.viewPage" /></a></button>
 	</c:if>
 	
 </body>

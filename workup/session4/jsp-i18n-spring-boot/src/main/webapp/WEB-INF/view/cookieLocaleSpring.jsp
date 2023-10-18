@@ -12,12 +12,12 @@
     <title>PhraseApp - i18n</title>
 </head>
 <body>
-    <h2>simple jsp - not spring</h2>
+    <h2>Spring MVC JSP</h2>
 	<h2>
 		<fmt:message key="label.welcome" />
 	</h2>
 	<p><fmt:message key="label.cookieLocaleContent" /></p>
 	
-	<button><a href="changeLocale.jsp"><fmt:message key="label.back" /></a></button>
+	<button><a href="changeLocale"><fmt:message key="label.back" /></a></button>
 </body>
 </html>

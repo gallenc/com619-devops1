@@ -11,7 +11,7 @@
 	<title>PhraseApp - i18n</title>
 </head>
 <body>
-    <h2>simple jsp - not spring</h2>
+    <h2>Spring MVC JSP</h2>
 	<h2>
 		<fmt:message key="label.welcome" />
 	</h2>

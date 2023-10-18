@@ -1,4 +1,4 @@
-package org.solent.spring.map;
+package org.phraseapp.spring;
 
 
 import org.springframework.boot.SpringApplication;

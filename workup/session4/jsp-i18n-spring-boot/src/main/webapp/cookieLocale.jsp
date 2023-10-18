@@ -12,7 +12,7 @@
     <title>PhraseApp - i18n</title>
 </head>
 <body>
-    <h2>simple jsp - not spring</h2>
+    <h2>simple jsp - not spring cookie['lang'].value=${cookie['lang'].value}</h2>
 	<h2>
 		<fmt:message key="label.welcome" />
 	</h2>

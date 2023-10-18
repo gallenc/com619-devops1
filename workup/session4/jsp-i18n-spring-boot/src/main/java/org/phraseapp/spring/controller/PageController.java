@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created by pingwin on 27.10.16.
+ * Created by cgallen
  */
 @Controller
 public class PageController {
@@ -16,7 +16,7 @@ public class PageController {
     
     @RequestMapping("/cookieLocale")
     public String cookieLocalePage(){
-        return "changeLocaleSpring";
+        return "cookieLocaleSpring";
     }
     
     @RequestMapping("/requestLocale")

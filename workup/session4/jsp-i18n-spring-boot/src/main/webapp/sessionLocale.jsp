@@ -12,7 +12,7 @@
     <title>PhraseApp - i18n</title>
 </head>
 <body>
-    <h2>simple jsp - not spring</h2>
+    <h2>simple jsp - not spring sessionScope.lang=${sessionScope.lang}</h2>
 	<h2>
 		<fmt:message key="label.welcome" />
 	</h2>

@@ -7,11 +7,12 @@ taken from https://github.com/PhraseApp-Blog/jsp-i18n
 https://phrase.com/blog/posts/internationalization-basic-jsp-servlet/
 
 To run
+
 ```
 mvn clean install
 mvn cargo:run
 ```
 
-appliation is at 
+application is at 
 
 http://localhost:8080/jsp-i18n/sessionLocale.jsp

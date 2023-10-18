@@ -17,3 +17,5 @@ https://telecominfraproject.com/
 
 
 https://www.freecodecamp.org/news/how-to-get-user-location-with-javascript-geolocation-api/
+
+https://phrase.com/blog/posts/internationalization-basic-jsp-servlet/

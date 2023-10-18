@@ -29,8 +29,8 @@
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
+| Wednesday class         |             |              |             |                |             |
+| kryptonite  | Abraham James |   5JAMEA07 |  https://github.com/ArconOffl/COM619-Assignment1   |  https://github.com/users/ArconOffl/projects/2    |   http://ntworlock.uksouth.cloudapp.azure.com:8080/          |
+|             | Nathan Worlock  | AcornOffl |             |                |             |
+|             | Jenny Wilson | 5wilsn94     |             |                |             |
 

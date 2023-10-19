@@ -2,6 +2,7 @@
 
 This sessions example looks at internationalisation (i18n) using the JSTL internationalisation library.
 
+See supporting video [internationalisation - i18n](https://youtu.be/M5izKUCdruA)
 
 https://docs.oracle.com/javaee/5/tutorial/doc/bnakw.html  Internationalisation Tag Library
 

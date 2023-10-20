@@ -1,4 +1,4 @@
-```
+```mermaid
 graph TD
 A[Start] --> B{Do you have coffee beans?}
 B --> |Yes| C[Grind the coffee beans]

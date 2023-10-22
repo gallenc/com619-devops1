@@ -27,7 +27,7 @@ public class MVCController {
         if (sessionUser == null) {
             sessionUser = new User();
             sessionUser.setUsername("anonymous");
-            sessionUser.setUserRole(UserRole.ANONYMOUS);
+            sessionUser.setUserRole(UserRole.ROLE_ANONYMOUS);
             session.setAttribute("sessionUser",sessionUser);
         }
         return sessionUser;
@@ -40,9 +40,7 @@ public class MVCController {
     }
 
     @RequestMapping(value = "/home", method = {RequestMethod.GET, RequestMethod.POST})
-    public String viewCart(@RequestParam(name = "action", required = false) String action,
-            @RequestParam(name = "itemName", required = false) String itemName,
-            @RequestParam(name = "itemUUID", required = false) String itemUuid,
+    public String homePage(@RequestParam(name = "action", required = false) String action,
             Model model,
             HttpSession session) {
 
@@ -63,7 +61,7 @@ public class MVCController {
     }
 
     @RequestMapping(value = "/about", method = {RequestMethod.GET, RequestMethod.POST})
-    public String aboutCart(Model model, HttpSession session) {
+    public String aboutPage(Model model, HttpSession session) {
 
         // get sessionUser from session
         User sessionUser = getSessionUser(session);
@@ -75,7 +73,7 @@ public class MVCController {
     }
 
     @RequestMapping(value = "/contact", method = {RequestMethod.GET, RequestMethod.POST})
-    public String contactCart(Model model, HttpSession session) {
+    public String contactPage(Model model, HttpSession session) {
 
         // get sessionUser from session
         User sessionUser = getSessionUser(session);

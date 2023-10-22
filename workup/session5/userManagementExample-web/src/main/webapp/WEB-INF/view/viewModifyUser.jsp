@@ -82,7 +82,7 @@
 
             </table>
 
-            <c:if test="${sessionUser.userRole !='ADMINISTRATOR'}">
+            <c:if test="${sessionUser.userRole !='ROLE_ADMINISTRATOR'}">
                 <p>User Status and role </p>
                 <table class="table">
                     <thead>
@@ -100,7 +100,7 @@
                     </table>
             </c:if>
 
-            <c:if test="${sessionUser.userRole =='ADMINISTRATOR'}">
+            <c:if test="${sessionUser.userRole =='ROLE_ADMINISTRATOR'}">
                 <p>Manage User Status and role </p>
                 <table class="table">
                     <thead>
@@ -140,7 +140,7 @@
             <p>Re Enter Password <input type="password" name="password2" ></input></p>
             <button class="btn" type="submit" >Update ${modifyUser.username} Password</button>
         </form>
-        <c:if test="${sessionUser.userRole =='ADMINISTRATOR'}">
+        <c:if test="${sessionUser.userRole =='ROLE_ADMINISTRATOR'}">
             <BR>
             <form action="./users">
                 <button class="btn" type="submit" >Return To Users</button>

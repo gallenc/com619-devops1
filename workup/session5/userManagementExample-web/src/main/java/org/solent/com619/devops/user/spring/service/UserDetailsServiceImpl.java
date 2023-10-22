@@ -40,8 +40,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
 
-		grantedAuthorities.add(new SimpleGrantedAuthority(user.getUserRole().name()));
-		LOG.debug("   added granted authority role to username " + username + " " + user.getUserRole().name());
+		grantedAuthorities.add(new SimpleGrantedAuthority(user.getUserRole().getTag()));
+		LOG.debug("   added granted authority role to username " + username + " tag: " 
+		+ user.getUserRole().getTag() + " name: " + user.getUserRole().name());
 
 		boolean enabled = true;
 		// set login enabled depending upon user enabled status
@@ -56,7 +57,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		// boolean accountNonLocked,
 		// java.util.Collection<? extends GrantedAuthority> authorities)
 		org.springframework.security.core.userdetails.User userDetailsUser = new org.springframework.security.core.userdetails.User(
-				user.getUsername(), user.getPassword(), enabled, true, true, true, grantedAuthorities);
+				user.getUsername(), user.getHashedPassword(), enabled, true, true, true, grantedAuthorities);
 
 		return userDetailsUser;
 	}

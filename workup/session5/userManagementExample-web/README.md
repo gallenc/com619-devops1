@@ -32,22 +32,28 @@ The CSS in this example uses bootstrap and the bootstrap-starter.html which is i
 
 You can choose to use any of this application which you find useful as a framework.
 
-
-## running 
+## to run locally
 
 To run as spring boot application 
 
 ```
 mvn clean install
+
 mvn spring-boot:run
 ```
 
-You can also use the docker-compose script.
+UI is at http://localhost:8080/
 
-```
-docker-compose up
-```
 
+## to see open api annotations
+
+Swagger / OpenAPI Test UI:
+
+http://localhost:8080/swagger-ui/index.html
+
+Swagger / OpenAPI yaml:
+
+http://localhost:8080/api-docs
 
 
 

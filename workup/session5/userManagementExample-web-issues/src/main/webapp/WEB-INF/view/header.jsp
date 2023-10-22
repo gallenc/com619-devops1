@@ -48,7 +48,7 @@
                             <li <% if ("home".equals(request.getAttribute("selectedPage"))) {%> class="active"  <% } %> ><a href="./home">Home</a></li> 
                             <li <% if ("about".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% } %> ><a href="./about">About</a></li> 
                             <li <% if ("contact".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./contact">Contact</a></li>                          
-                                <c:if test="${sessionUser.userRole =='ADMINISTRATOR'}">
+                                <c:if test="${sessionUser.userRole =='ROLE_ADMINISTRATOR'}">
                                 <li class="dropdown" >
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Admin <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -60,17 +60,17 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <!-- user role:  ${sessionUser.userRole}-->
-                            <c:if test="${sessionUser.userRole =='ANONYMOUS'}">
+                            <c:if test="${sessionUser.userRole =='ROLE_ANONYMOUS'}">
                                 <li><a href="./login">Login or create a new Account</a></li>
                                 </c:if>
-                                <c:if test="${sessionUser.userRole !='ANONYMOUS'}">
+                                <c:if test="${sessionUser.userRole !='ROLE_ANONYMOUS'}">
                                 <form id="logoutForm" method="POST" action="./logout">
                                 </form>
                                 <form id="profile" method="GET" action="./viewModifyUser">
                                     <input type="hidden" name="username" value="${sessionUser.username}"/>
                                 </form>
                                 <p class="text-muted"> Welcome 
-                                    <c:if test="${sessionUser.userRole =='ADMINISTRATOR'}"> Admin</c:if>                                   
+                                    <c:if test="${sessionUser.userRole =='ROLE_ADMINISTRATOR'}"> Admin</c:if>                                   
                                     ${sessionUser.username}&nbsp;&nbsp;
                                     <a onclick="document.forms['logoutForm'].submit()">Logout</a><BR>
                                     <a onclick="document.forms['profile'].submit()">User Profile</a></p>

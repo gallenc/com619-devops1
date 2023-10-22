@@ -42,7 +42,7 @@ public class PopulateDatabaseOnStart {
         adminUser.setUsername(DEFAULT_ADMIN_USERNAME);
         adminUser.setFirstName("default administrator");
         adminUser.setPassword(DEFAULT_ADMIN_PASSWORD);
-        adminUser.setUserRole(UserRole.ADMINISTRATOR);
+        adminUser.setUserRole(UserRole.ROLE_ADMINISTRATOR);
 
         List<User> users = userRepository.findByUsername(DEFAULT_ADMIN_USERNAME);
         if (users.isEmpty()) {
@@ -56,7 +56,7 @@ public class PopulateDatabaseOnStart {
         defaultUser.setUsername(DEFAULT_USER_USERNAME);
         defaultUser.setFirstName("default user");
         defaultUser.setPassword(DEFAULT_USER_PASSWORD);
-        defaultUser.setUserRole(UserRole.CUSTOMER);
+        defaultUser.setUserRole(UserRole.ROLE_CUSTOMER);
 
         users = userRepository.findByUsername(DEFAULT_USER_USERNAME);
         if (users.isEmpty()) {

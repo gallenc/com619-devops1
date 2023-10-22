@@ -34,7 +34,7 @@ public class UserAndLoginController {
         if (sessionUser == null) {
             sessionUser = new User();
             sessionUser.setUsername("anonymous");
-            sessionUser.setUserRole(UserRole.ANONYMOUS);
+            sessionUser.setUserRole(UserRole.ROLE_ANONYMOUS);
             session.setAttribute("sessionUser", sessionUser);
         }
         return sessionUser;
@@ -62,7 +62,7 @@ public class UserAndLoginController {
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
 
-        if (!UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+        if (!UserRole.ROLE_ANONYMOUS.equals(sessionUser.getUserRole())) {
             errorMessage = "user " + sessionUser.getUsername() + " already logged in";
             LOG.warn(errorMessage);
             model.addAttribute("errorMessage", errorMessage);
@@ -95,7 +95,7 @@ public class UserAndLoginController {
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
 
-        if (!UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+        if (!UserRole.ROLE_ANONYMOUS.equals(sessionUser.getUserRole())) {
             errorMessage = "user " + sessionUser.getUsername() + " already logged in";
             LOG.warn(errorMessage);
             model.addAttribute("errorMessage", errorMessage);
@@ -218,7 +218,7 @@ public class UserAndLoginController {
             }
 
             User modifyUser = new User();
-            modifyUser.setUserRole(UserRole.CUSTOMER);
+            modifyUser.setUserRole(UserRole.ROLE_CUSTOMER);
             modifyUser.setUsername(username);
             modifyUser.setFirstName(username);
             modifyUser.setPassword(password);
@@ -226,7 +226,7 @@ public class UserAndLoginController {
 
             // if already logged in - keep session modifyUser else set session modifyUser to modifyUser
             // else set session modifyUser the newly created modifyUser (i.e. automatically log in)
-            if (UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+            if (UserRole.ROLE_ANONYMOUS.equals(sessionUser.getUserRole())) {
                 session.setAttribute("sessionUser", modifyUser);
                 model.addAttribute("sessionUser", modifyUser);
                 LOG.debug("log in newly created user=" + modifyUser);
@@ -255,7 +255,7 @@ public class UserAndLoginController {
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
 
-        if (!UserRole.ADMINISTRATOR.equals(sessionUser.getUserRole())) {
+        if (!UserRole.ROLE_ADMINISTRATOR.equals(sessionUser.getUserRole())) {
             errorMessage = "you must be an administrator to access users information";
             return "home";
         }
@@ -284,13 +284,13 @@ public class UserAndLoginController {
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
 
-        if (UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+        if (UserRole.ROLE_ANONYMOUS.equals(sessionUser.getUserRole())) {
             errorMessage = "you must be logged in to access user information";
             model.addAttribute("errorMessage", errorMessage);
             return "home";
         }
 
-        if (!UserRole.ADMINISTRATOR.equals(sessionUser.getUserRole())) {
+        if (!UserRole.ROLE_ADMINISTRATOR.equals(sessionUser.getUserRole())) {
             // if not an administrator you can only access your own account info
             if (!sessionUser.getUsername().equals(username)) {
                 errorMessage = "security non admin viewModifyUser called for username " + username
@@ -347,13 +347,13 @@ public class UserAndLoginController {
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
 
-        if (UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+        if (UserRole.ROLE_ANONYMOUS.equals(sessionUser.getUserRole())) {
             errorMessage = "you must be logged in to access users information";
             model.addAttribute("errorMessage", errorMessage);
             return "home";
         }
 
-        if (!UserRole.ADMINISTRATOR.equals(sessionUser.getUserRole())) {
+        if (!UserRole.ROLE_ADMINISTRATOR.equals(sessionUser.getUserRole())) {
             if (!sessionUser.getUsername().equals(username)) {
                 errorMessage = "security viewModifyUser called for non admin username " + username
                         + "which is not the logged in user =" + sessionUser.getUsername();
@@ -391,8 +391,8 @@ public class UserAndLoginController {
         }
 
         // else update all other properties
-        // only admin can update modifyUser role aand enabled
-        if (UserRole.ADMINISTRATOR.equals(sessionUser.getUserRole())) {
+        // only admin can update modifyUser role and enabled
+        if (UserRole.ROLE_ADMINISTRATOR.equals(sessionUser.getUserRole())) {
             try {
                 UserRole role = UserRole.valueOf(userRole);
                 modifyUser.setUserRole(role);

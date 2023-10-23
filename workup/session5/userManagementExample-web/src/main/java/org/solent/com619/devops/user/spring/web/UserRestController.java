@@ -30,13 +30,16 @@ public class UserRestController {
 
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+	UserAuthoriserService userAuthorisedService;
 
 	@Operation(summary = "Get a list of all users")
 
 	@RequestMapping("/getUserList")
 	public Iterable<User> listUsers(HttpServletRequest httpRequest) {
 		
-		if (UserRole.ADMINISTRATOR != authorisedUserRole(httpRequest)) {
+		if (UserRole.ADMINISTRATOR != userAuthorisedService.authorisedUserRole(httpRequest)) {
 			throw new ResponseStatusException(HttpStatus.FORBIDDEN, "unauthorised request");
 		};
 		
@@ -49,7 +52,7 @@ public class UserRestController {
 	@RequestMapping("/getUser")
 	public User findUser(@RequestParam String username, HttpServletRequest httpRequest) {
 		
-		if (UserRole.ADMINISTRATOR != authorisedUserRole(httpRequest)) {
+		if (UserRole.ADMINISTRATOR != userAuthorisedService.authorisedUserRole(httpRequest)) {
 			throw new ResponseStatusException(HttpStatus.FORBIDDEN, "unauthorised request");
 		};
 		
@@ -62,36 +65,5 @@ public class UserRestController {
 	}
 
 	
-	public UserRole authorisedUserRole(HttpServletRequest httpRequest) {
-
-		UserRole userRole = UserRole.ANONYMOUS;
-
-		try {
-
-			final String authorization = httpRequest.getHeader("Authorization");
-			if (authorization != null && authorization.toLowerCase().startsWith("basic")) {
-				// Authorization: Basic base64credentials
-				String base64Credentials = authorization.substring("Basic".length()).trim();
-				byte[] credDecoded = Base64.getDecoder().decode(base64Credentials);
-				String credentials = new String(credDecoded, StandardCharsets.UTF_8);
-				// credentials = username:password
-				final String[] values = credentials.split(":", 2);
-				String username = values[0];
-				String password = values[1];
-				
-				List<User> users = userRepository.findByUsername(username);
-				if (users.isEmpty() || ! username.equals(users.get(0).getUsername())) {
-					throw new RuntimeException("unknown authenticated username "+username);
-				}
-				if (! users.get(0).isValidPassword(password) ) throw new RuntimeException("incorrect password for username "+username) ;
-				return users.get(0).getUserRole();
-			}
-
-		} catch (Exception e) {
-			throw new RuntimeException("problem decoding credentials: ", e);
-		}
-
-		return userRole;
-	}
 
 }

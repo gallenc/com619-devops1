@@ -1,3 +1,9 @@
+
+This diagram was generated using https://bard.google.com/chat/
+
+usingthe prompt 'generate a diagram in mermaid for making coffee'
+
+
 ```mermaid
 graph TD
 A[Start] --> B{Do you have coffee beans?}

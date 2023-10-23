@@ -1,7 +1,9 @@
 
-# User Management example
+# ReST Authentication and User Management example
 
-This session is accompanied by a video [COM619 Session 3](https://youtu.be/v3XppCqvH5c)
+This session builds upon the example in session 3 to show how a ReSt api can also be authenticated.
+
+This session is accompanied by a video [COM619 Session 5](xxxx)
 
 # Introduction
 
@@ -10,27 +12,28 @@ Users can self-register to use the application but only the system administrator
 
 (Note that this application is quite simple and does not use spring security but it does show how user credentials can be applied to a session).
 
-You can see the user information in the model package, Users have an Address, a Username and Password. 
-A UserRepository is used to persist users to the database
+The basic user authentication was explained in the previous example in session 3 .
 
-The UserAndloginController does hte work of managing the user data and controlling the user update JSP's.
-Note the use of @Transaction on the user update methods. 
-This means that the user will be atomically updated within a database transaction.
+This example has been extended in userManagementExample-web to include a ReST api which is documented with swagger/openapi 
 
-The PasswordUtils class is used to hash the password using a library called BCrypt.
-Only the hash of the password is stored in the database.
+The ReST api is implemented in UserRestController. 
 
-Users have different roles and only ADMINISTRATOR users can change another user's data or change their role.
+The /getUserList request gets a full list of users.
 
-The application uses Spring MVC and Spring Data (JPA) to store data but note that in this example the configuration is done slightly differently using a PersistanceJPAConfig. 
+the /getUser?username=xxx request gets a user with a particular user name
 
-This is just a choice to expose more of the internals of spring which are normally hidden in spring boot. 
+The UserRestController uses the UserRepository to access the database.
 
-The application also has more sophisticated use of JSP's where each JSP has a header and footer which allows the same content to be rendered for the header and footer for all JSP's
+Obviously, we only want users with ADMINISTRATOR privileges to access user information, so the ReST api must be secured. 
+In this example we use simple basic authentication to secure the ReST api.
+The UserAuthoriserService is used to extract the basic authorisation credentials and find the UserRole associated with the user.
+If the username is not found or the password does not authenticate, then a not authorised message is returned to the ReST call. 
 
-The CSS in this example uses bootstrap and the bootstrap-starter.html which is included here as an example was used to create the styling used by all of the JSP's.
+If the username is found and the user is an ADMINISTRATOR, then the ReST call is allowed to proceed. 
 
-You can choose to use any of this application which you find useful as a framework.
+The Swagger UI is only visable to someone logged in as an administrator.
+The AuthOpenApiCustomizer adds a basic authentication button to the Swagger UI to allow users to set hte username and password accessing the ReST api in a Swagger UI test. 
+
 
 
 ## running 
@@ -50,10 +53,16 @@ docker-compose up
 
 ## rest api examples
 
-basic authentication in the url - not secure - better to use basic auth headers
+You can include basic basic authentication in the url of Get requests 
+
+http://username:password@localhost:8080/...
+
+The application will treat this as a basic auth request.
 
 http://globaladmin:globaladmin@localhost:8080/getUserList
 
 http://globaladmin:globaladmin@localhost:8080/getUser?username=user1234
+
+But this is  not secure - better to use basic authentication headers which are encrypted using https.
 
 

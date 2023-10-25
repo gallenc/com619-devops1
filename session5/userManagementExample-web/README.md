@@ -73,4 +73,14 @@ http://globaladmin:globaladmin@localhost:8080/getUser?username=user1234
 
 But this is  not secure - better to use basic authentication headers which are encrypted using https.
 
+You can also test the app using the RESTer plugin for firefox or chrome.
+
+[RESTer Chrome plugin](https://chrome.google.com/webstore/detail/rester/eejfoncpjfgmeleakejdcanedmefagga)
+
+[RESTer Firefox plugin](https://addons.mozilla.org/en-GB/firefox/addon/rester/)
+
+
+This allows you to create any http or https request and add authentication to it.
+
+
 

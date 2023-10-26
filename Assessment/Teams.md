@@ -38,11 +38,11 @@
 | TBD         |             |              |             |                |             |
 | Insert Team Name Here         | Iona Pitt   |  custardbunz1  |  6pitti03@solant.ac.uk           |                |             |
 |         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |                |             |
-| TBD         | Blaise Tyree     |              |             |                |             |
-| TBD         | William Sephton   |              |             |                |             |
-| TBD         | Quin        |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
+|          | Blaise Tyree     |              |             |                |             |
+|         | William Sephton   |              |             |                |             |
+|          | Quin        |              |             |                |             |
+|         |             |              |             |                |             |
+|          |             |              |             |                |             |
 | Wednesday class         |             |              |             |                |             |
 | kryptonite  | Abraham James |   5JAMEA07 |  https://github.com/ArconOffl/COM619-Assignment1   |  https://github.com/users/ArconOffl/projects/2    |   http://ntworlock.uksouth.cloudapp.azure.com:8080/          |
 |             | Nathan Worlock  | AcornOffl |             |                |             |

@@ -33,7 +33,7 @@
 |          |Maye Hunt |              |             |                |             |
 |          |Georgios Kleitou |              |             |                |             |
 |          |             |              |             |                |             |
-| Git Guardians |Jakub Sepiolo | 5sepij35@solent.ac.uk <BR> jakubsepiolo2001 |             |                |             |
+| Git Guardians |Jakub Sepiolo | 5sepij35@solent.ac.uk <BR> jakubsepiolo2001 |  https://github.com/jakubsepiolo2001/COM619-AE1/           |  https://github.com/users/jakubsepiolo2001/projects/1              |             |
 |          |  Tyler Short | 5short82@solent.ac.uk <BR> Tyler-Short1 |             |                |             |
 |          |  Owen Bradstreet | 5brado63@solent.ac.uk <BR> owenbradstreet |             |                |             |
 |          |  Luke Wood | 5woodl59@solent.ac.uk <BR> lwoodremote |             |                |             |

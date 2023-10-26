@@ -2,6 +2,30 @@
 
 In this session we will be looking at securing a ReST application using basic authentication (without using spring security).
 
+## Basic Authentication
+
+The simplest form of authentication used by many web site is called Basic Authentication. 
+When using Basic Authentication, a browser adds an Authorization header to every request which passes a simple username and password to the server.
+
+The username and password are simply combined into a single string separated by a colon ':' character.
+The bytes making up this complete string is then encoded as base64 an represented as text characters. 
+This process simply reduces the size of the sent string and also avoids any problems with differn't character set encoding.
+
+```
+username:password -> Base64 encoding -> Basic {base64 encoded string)
+```
+A get request with username:password = globaladmin:globaladmin sent using curl would look like this
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/getUserList' \
+  -H 'accept: */*' \
+  -H 'Authorization: Basic Z2xvYmFsYWRtaW46Z2xvYmFsYWRtaW4='
+```
+We can also use a tool called RESTer to create a request.
+
+It is important to note that even though the authententcation creadential are hidden in the HTTP header, ther are far from secure. 
+Thus basic authentication should only be used over a TLS encoded link (i.e. using HTTPS)
 
 ## RESTer test app
 

@@ -22,11 +22,11 @@
 |             | Hamza Mohibe |              |             |                |             |
 |             |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
+| Insert Team Name Here         | Iona Pitt   |  custardbunz1  |  6pitti03@solant.ac.uk           |                |             |
+|         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |                |             |
+| TBD         | Blaise Tyree     |              |             |                |             |
+| TBD         | William Sephton   |              |             |                |             |
+| TBD         | Quin        |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | Wednesday class         |             |              |             |                |             |

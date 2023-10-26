@@ -39,16 +39,7 @@
 |          |  Luke Wood | 5woodl59@solent.ac.uk <BR> lwoodremote |             |                |             |
 |          |  Steve Dawe | 5dawes65@solent.ac.uk <BR> 5Dawe |             |                |             |
 | TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
+|         |             |              |             |                |             |
 | Insert Team Name Here         | Iona Pitt   |  custardbunz1  |  6pitti03@solant.ac.uk           |                |             |
 |         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |                |             |
 |          | Blaise Tyree     |              |             |                |             |

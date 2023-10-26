@@ -8,13 +8,13 @@
 
 [AssessmentCOM619-AE1-2023-24;1.pdf](../Assessment/AssessmentCOM619-AE1-2023-24;1.pdf)
 
-To be submitted before Christmas - Date TBD
+To be submitted before Christmas - Date 16.00 Friday 15 December 2023 (Submission link will be available on SOL)
 
 ## Assessment AE2 - Report
 
 [AssessmentCOM619-AE2-2023-24;1.pdf](../Assessment/AssessmentCOM619-AE2-2023-24;1.pdf)
 
-To be submitted 2nd week January - Date TBD
+To be submitted January - Date 16.00 Friday 12 january 2024  (Submission link will be available on SOL)
 
 ## Application Requirements
 

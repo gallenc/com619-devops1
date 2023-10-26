@@ -2,6 +2,8 @@
 
 In this session we will be looking at securing a ReST application using basic authentication (without using spring security).
 
+See [Session 5 Basic Authentication of ReST api video](https://youtu.be/O0w8UAEmCds)
+
 ## Basic Authentication
 
 The simplest form of authentication used by many web site is called Basic Authentication. 

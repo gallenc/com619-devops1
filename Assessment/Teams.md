@@ -32,7 +32,12 @@
 |          |Harriet Goodyear | GoodH21             |             |                |             |
 |          |Maye Hunt |              |             |                |             |
 |          |Georgios Kleitou |              |             |                |             |
-| TBD         |             |              |             |                |             |
+|          |             |              |             |                |             |
+| Git Guardians |Jakub Sepiolo | 5sepij35@solent.ac.uk <BR> jakubsepiolo2001 |             |                |             |
+|          |  Tyler Short | 5short82@solent.ac.uk <BR> Tyler-Short1 |             |                |             |
+|          |  Owen Bradstreet | 5brado63@solent.ac.uk <BR> owenbradstreet |             |                |             |
+|          |  Luke Wood | 5woodl59@solent.ac.uk <BR> lwoodremote |             |                |             |
+|          |  Steve Dawe | 5dawes65@solent.ac.uk <BR> 5Dawe |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |

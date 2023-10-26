@@ -21,13 +21,21 @@
 |             |  Igor Kanchukovskyi       |              |             |                |             |
 |             | Hamza Mohibe |              |             |                |             |
 |             |             |              |             |                |             |
-| TBD       |             |              |             |                |             |
-| TBD         |             |              |             |                |             |
 | TEAM NAME X | Gaetano Archer |              |             |                |             |
 | TEAM NAME X| Jacob Shattock |              |             |                |             |
 | TEAM NAME X| Danial Agha |              |             |                |             |
 | TEAM NAME X| Muhammad Sajid |              |             |                |             |
 | TEAM NAME X | Josh Clarke |              |             |                |             |
+|          |             |              |             |                |             |
+| Mongoose | Theodoros Christou  |  |  https://github.com/GoodH21/DevOps-Group           |                | http://com619-mongeese.uksouth.cloudapp.azure.com:3000            |
+|          |Arooj Fatima |              |             |                |             |
+|          |Harriet Goodyear | GoodH21             |             |                |             |
+|          |Maye Hunt |              |             |                |             |
+|          |Georgios Kleitou |              |             |                |             |
+| TBD         |             |              |             |                |             |
+| TBD         |             |              |             |                |             |
+| TBD         |             |              |             |                |             |
+| TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |

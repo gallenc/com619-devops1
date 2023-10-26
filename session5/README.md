@@ -24,8 +24,8 @@ curl -X 'GET' \
 ```
 We can also use a tool called RESTer to create a request.
 
-It is important to note that even though the authententcation creadential are hidden in the HTTP header, ther are far from secure. 
-Thus basic authentication should only be used over a TLS encoded link (i.e. using HTTPS)
+It is important to note that even though the authentication credentials are hidden in the HTTP header, they are far from secure. 
+Thus Basic Authentication should only be used over a TLS encoded link (i.e. using HTTPS)
 
 ## RESTer test app
 

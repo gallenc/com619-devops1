@@ -28,8 +28,6 @@
 | TEAM NAME X| Danial Agha |              |             |                |             |
 | TEAM NAME X| Muhammad Sajid |              |             |                |             |
 | TEAM NAME X | Josh Clarke |              |             |                |             |
-
-
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |
 | TBD         |             |              |             |                |             |

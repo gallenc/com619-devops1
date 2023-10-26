@@ -21,11 +21,11 @@
 |             |  Igor Kanchukovskyi       |              |             |                |             |
 |             | Hamza Mohibe |              |             |                |             |
 |             |             |              |             |                |             |
-| TEAM NAME X | Gaetano Archer |              |             |                |             |
-| TEAM NAME X| Jacob Shattock |              |             |                |             |
-| TEAM NAME X| Danial Agha |              |             |                |             |
-| TEAM NAME X| Muhammad Sajid |              |             |                |             |
-| TEAM NAME X | Josh Clarke |              |             |                |             |
+| TEAM NAME X | Gaetano Archer | GDoesCode     |  https://github.com/GDoesCode/COM619DevOpsGroupWork   | https://github.com/users/GDoesCode/projects/1    |             |
+| TEAM NAME X| Jacob Shattock | jacob-shattock-solent  |             |                |             |
+| TEAM NAME X| Danial Agha | DAghaSolent       |             |                |             |
+| TEAM NAME X| Muhammad Sajid | AhubSajid       |             |                |             |
+| TEAM NAME X | Josh Clarke | JoshC98         |             |                |             |
 |          |             |              |             |                |             |
 | Mongoose | Theodoros Christou  |  |  https://github.com/GoodH21/DevOps-Group           |                | http://com619-mongeese.uksouth.cloudapp.azure.com:3000            |
 |          |Arooj Fatima |              |             |                |             |

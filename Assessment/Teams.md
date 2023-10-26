@@ -15,7 +15,7 @@
 |             | Thomas Strong   |              |             |                |             |
 |             | Joao Maria Fragoso Potes   |              |             |                |             |
 |             |             |              |             |                |             |
-| Drop table * |  Harry Maynard |              |             |                |             |
+| Drop table * |  Harry Maynard |              |  https://github.com/jrykns/not-a-virus-map  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |
 |             |  Senju Murase   |              |             |                |             |
 |             |  Dario Cruz  |              |             |                |             |
 |             |  Igor Kanchukovskyi       |              |             |                |             |

@@ -3,7 +3,7 @@ version: "3.2"
 services: 
     # http://localhost:8080/
     restsimulator :
-        image: jetty:9.4-jre11
+        image: jetty:10.0.17-jdk11
         ports: 
         - "8080:8080"
         volumes:

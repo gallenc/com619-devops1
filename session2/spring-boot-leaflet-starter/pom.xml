@@ -188,7 +188,7 @@
             <version>${cargo.plugin.version}</version>
             <configuration>
                <container>
-                  <containerId>jetty9x</containerId>
+                  <containerId>jetty10x</containerId>
                   <type>remote</type>
                </container>
 

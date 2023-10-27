@@ -81,6 +81,9 @@ docker-compose up
 
 ## to run in a remote docker
 
+
+(NOTE - this example has been upgraded to use jetty 10 because there appears to be some stability issues with using cargo in the default jetty 9 container)
+
 ```
 docker-compose -f docker-compose-deploy.yml build
 docker-compose -f docker-compose-deploy.yml up -d

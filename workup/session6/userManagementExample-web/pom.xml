@@ -33,6 +33,9 @@
       <!-- needed by Hibernate for java 11 -->
       <javassist.version>3.27.0-GA</javassist.version>
       <cglib-nodep.version>3.2.12</cglib-nodep.version>
+      
+      <!-- cargo -->
+      <cargo.plugin.version>1.10.9</cargo.plugin.version>
 
       <!-- You can copy and paste the single properties, into the pom.xml file and the Netbeans will pick them up. -->
       <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>1.5</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>
@@ -285,6 +288,45 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.11.0</version>
          </plugin>
+
+        <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven3-plugin</artifactId>
+            <version>${cargo.plugin.version}</version>
+            <configuration>
+               <container>
+                  <containerId>jetty10x</containerId>
+                  <type>remote</type>
+               </container>
+
+               <configuration>
+                  <type>runtime</type>
+                  <properties>
+                     <cargo.hostname>127.0.0.1</cargo.hostname>
+                     <cargo.servlet.port>8080</cargo.servlet.port>
+                     <cargo.protocol>http</cargo.protocol>
+                     <cargo.remote.username>someusername</cargo.remote.username>
+                     <cargo.remote.password>somepassword</cargo.remote.password>
+                  </properties>
+               </configuration>
+
+               <deployer>
+                  <type>remote</type>
+               </deployer>
+
+               <deployables>
+                  <deployable>
+                     <groupId>${project.groupId}</groupId>
+                     <artifactId>${project.artifactId}</artifactId>
+                     <type>war</type>
+                     <properties>
+                        <context>/</context>
+                     </properties>
+                  </deployable>
+               </deployables>
+            </configuration>
+         </plugin>
+
 
 
       </plugins>

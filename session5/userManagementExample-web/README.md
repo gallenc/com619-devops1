@@ -3,8 +3,6 @@
 
 This session builds upon the example in session 3 to show how a ReSt api can also be authenticated.
 
-This session is accompanied by a video TBD [COM619 Session 5](xxxx)
-
 # Introduction
 
 This is a simple user management application which shows how to create and update a set of user accounts with a password.

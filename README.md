@@ -20,11 +20,11 @@ Please read and follow the Getting Started instructions before doing anything el
 
 [session2](../main/session2/) Introduction to Spring, leaflet and deploying using cargo. 
 
-[session3](../main/session3/) 
+[session3](../main/session3/) Introduction to User account management and user roles.
 
-[session4](../main/session4/) 
+[session4](../main/session4/) Introduction to Internationalisation (i18n).
 
-[session5](../main/session5/) 
+[session5](../main/session5/) Introduction to basic authentication of ReST interfaces.
 
 [session6](../main/session6/) 
 

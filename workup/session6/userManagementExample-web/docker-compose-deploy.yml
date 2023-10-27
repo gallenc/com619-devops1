@@ -1,0 +1,12 @@
+# example build as part of docker compose https://github.com/zhao-lin-li/docker-compose-build/tree/master
+
+version: "3.2"
+
+services: 
+    # http://localhost:8080/
+    restsimulator :
+        build: .
+        ports: 
+        - "8080:8080"
+
+## deployer runs on http://localhost:8080/cargo-jetty-deployer/

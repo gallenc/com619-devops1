@@ -30,8 +30,10 @@ public class User {
     private UserRole userRole;
 
     private Boolean enabled = true;
+    
+    private String photoLink = "";
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
@@ -117,10 +119,26 @@ public class User {
         this.hashedPassword = hashedPassword;
     }
 
-    // no password or hashed password
+    public String getPhotoLink() {
+		return photoLink;
+	}
+
+	public void setPhotoLink(String photoLink) {
+		this.photoLink = photoLink;
+	}
+	
+	@Transient
+    public String getPhotoImagePath() {
+        if (photoLink == null || username == null) return null;
+         
+        return "user-photos/" + username + "/" + photoLink;
+    }
+
+	// no password or hashed password
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", firstName=" + firstName + ", secondName=" + secondName + ", username=" + username + ", password=NOT SHOWN, address=" + address + ", userRole=" + userRole + '}';
+        return "User{" + "id=" + id + ", firstName=" + firstName + ", secondName=" + secondName + ", username=" + username + ", password=NOT SHOWN, address=" + address 
+        		+ ", userRole=" + userRole +", photoLink="+ photoLink+ '}';
     }
 
 }

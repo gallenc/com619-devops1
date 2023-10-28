@@ -13,11 +13,24 @@
 <!-- Begin page content -->
 <main role="main" class="container">
 
+    <!-- modifying user -->
     <div>
         <H1>User Details ${modifyUser.username} </H1>
         <!-- print error message if there is one -->
         <div style="color:red;">${errorMessage}</div>
         <div style="color:green;">${message}</div>
+        
+        <!-- adding photo -->
+        <!-- see https://www.codejava.net/frameworks/spring-boot/spring-boot-file-upload-tutorial -->
+        <div>
+           <img src="./${modifyUser.photoImagePath}" alt="${modifyUser.username} image" width="100" height="100" />
+           <form action="./addUserPhoto" method="POST" enctype="multipart/form-data">
+               <label>Photo: </label>
+               <input type="file" name="image" accept="image/png, image/jpeg" capture="camera">
+               <input type="hidden" name="username" value="${modifyUser.username}"/>
+               <button class="btn" type="submit" >Update Photo</button>
+           </form>
+        </div>
 
         <form action="./viewModifyUser" method="POST">
             <table class="table">

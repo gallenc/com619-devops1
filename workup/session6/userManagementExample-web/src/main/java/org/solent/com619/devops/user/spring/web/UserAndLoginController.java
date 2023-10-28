@@ -1,5 +1,6 @@
 package org.solent.com619.devops.user.spring.web;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
@@ -8,10 +9,6 @@ import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.solent.com619.devops.user.dao.impl.UserRepository;
-import org.solent.com619.devops.user.model.dto.Address;
-import org.solent.com619.devops.user.model.dto.User;
-import org.solent.com619.devops.user.model.dto.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +16,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.util.StringUtils;
+
+import org.solent.com619.devops.user.dao.impl.UserRepository;
+import org.solent.com619.devops.user.model.dto.Address;
+import org.solent.com619.devops.user.model.dto.User;
+import org.solent.com619.devops.user.model.dto.UserRole;
+import org.solent.com619.devops.user.spring.service.FileUploadDAO;
 
 @Controller
 @RequestMapping("/")
@@ -28,6 +33,10 @@ public class UserAndLoginController {
 
     @Autowired
     UserRepository userRepository;
+    
+    @Autowired
+    FileUploadDAO fileUploadDao;
+    
 
     private User getSessionUser(HttpSession session) {
         User sessionUser = (User) session.getAttribute("sessionUser");
@@ -441,6 +450,66 @@ public class UserAndLoginController {
         model.addAttribute("selectedPage", "home");
 
         return "viewModifyUser";
+    }
+    
+    /*
+     * method to add user photo - based on example in 
+     * https://www.codejava.net/frameworks/spring-boot/spring-boot-file-upload-tutorial
+     */
+    @RequestMapping(value = {"/addUserPhoto"}, method = RequestMethod.POST)
+    public String addUserPhoto(
+            @RequestParam(value = "username", required = true) String username,
+            
+            @RequestParam("image") MultipartFile multipartFile,
+            
+            Model model,
+            HttpSession session) {
+        String message = "";
+        String errorMessage = "";
+
+        LOG.debug("post addUserPhoto called for username=" + username);
+        
+        // security check if party is allowed to access or modify this party
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+
+        if (UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+            errorMessage = "you must be logged in to access users information";
+            model.addAttribute("errorMessage", errorMessage);
+            return "home";
+        }
+
+        List<User> userList = userRepository.findByUsername(username);
+        if (userList.isEmpty()) {
+            errorMessage = "addUserPhoto called for unknown username:" + username;
+            LOG.warn(errorMessage);
+            model.addAttribute("errorMessage", errorMessage);
+            return ("home");
+        }
+
+        User modifyUser = userList.get(0);
+        
+        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+        modifyUser.setPhotoLink(fileName);
+         
+        modifyUser = userRepository.save(modifyUser);
+ 
+        String relativeUploadDir = "/user-photos/" + modifyUser.getUsername();
+ 
+        try {
+			fileUploadDao.saveFile(relativeUploadDir, fileName, multipartFile);
+		} catch (IOException e) {
+			LOG.debug("problem saving file locally ",e); 
+			message= "problem saving file locally "+ e.getMessage();
+		}
+
+        model.addAttribute("modifyUser", modifyUser);
+        model.addAttribute("errorMessage", errorMessage);
+        model.addAttribute("message", message);
+        model.addAttribute("selectedPage", "home");
+
+        return "viewModifyUser";
+        
     }
 
     /*

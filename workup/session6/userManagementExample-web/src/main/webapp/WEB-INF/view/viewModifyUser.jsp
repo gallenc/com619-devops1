@@ -23,10 +23,10 @@
         <!-- adding photo -->
         <!-- see https://www.codejava.net/frameworks/spring-boot/spring-boot-file-upload-tutorial -->
         <div>
+           <label>Photo: </label>
            <img src="./${modifyUser.photoImagePath}" alt="${modifyUser.username} image" width="100" height="100" />
            <form action="./addUserPhoto" method="POST" enctype="multipart/form-data">
-               <label>Photo: </label>
-               <input type="file" name="image" accept="image/png, image/jpeg" capture="camera">
+               <input class="btn" type="file" name="image" accept="image/png, image/jpeg" capture="camera">
                <input type="hidden" name="username" value="${modifyUser.username}"/>
                <button class="btn" type="submit" >Update Photo</button>
            </form>

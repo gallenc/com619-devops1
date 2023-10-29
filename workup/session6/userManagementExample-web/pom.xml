@@ -33,7 +33,7 @@
       <!-- needed by Hibernate for java 11 -->
       <javassist.version>3.27.0-GA</javassist.version>
       <cglib-nodep.version>3.2.12</cglib-nodep.version>
-      
+
       <!-- cargo -->
       <cargo.plugin.version>1.10.9</cargo.plugin.version>
 
@@ -173,17 +173,17 @@
          <artifactId>springdoc-openapi-ui</artifactId>
          <version>${springdoc.version}</version>
       </dependency>
-<!--       <dependency> -->
-<!--          <groupId>org.springdoc</groupId> -->
-<!--          <artifactId>springdoc-openapi-security</artifactId> -->
-<!--          <version>${springdoc.version}</version> -->
-<!--       </dependency> -->
+      <!-- <dependency> -->
+      <!-- <groupId>org.springdoc</groupId> -->
+      <!-- <artifactId>springdoc-openapi-security</artifactId> -->
+      <!-- <version>${springdoc.version}</version> -->
+      <!-- </dependency> -->
 
       <!-- spring security -->
-<!--       <dependency> -->
-<!--          <groupId>org.springframework.boot</groupId> -->
-<!--          <artifactId>spring-boot-starter-security</artifactId> -->
-<!--       </dependency> -->
+      <!-- <dependency> -->
+      <!-- <groupId>org.springframework.boot</groupId> -->
+      <!-- <artifactId>spring-boot-starter-security</artifactId> -->
+      <!-- </dependency> -->
 
 
       <!-- tomcat jsp dependencies -->
@@ -281,6 +281,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <version>${spring-boot.version}</version>
+            <configuration>
+               <environmentVariables>
+                  <!-- this is only used for  spring-boot:run instead of application.properties image.file.uploadpath=./target/archive-files -->
+                  <!-- resolves to file:/C:/devel/gitrepos/com619-devops1/workup/session6/userManagementExample-web/./target/user-photos/ -->
+                  <image.file.uploadpath>./target/archive-files</image.file.uploadpath>
+               </environmentVariables>
+            </configuration>
          </plugin>
 
          <plugin>
@@ -289,7 +296,7 @@
             <version>3.11.0</version>
          </plugin>
 
-        <plugin>
+         <plugin>
             <groupId>org.codehaus.cargo</groupId>
             <artifactId>cargo-maven3-plugin</artifactId>
             <version>${cargo.plugin.version}</version>

@@ -23,7 +23,10 @@ public class FileUploadDAO {
 
 	public void saveFile(String relativeUploadDir, String fileName, MultipartFile multipartFile) throws IOException {
 		
-		String savePath = env.getProperty("image.file.uploadpath");
+		// note in jetty System.getProperty("java.io.tmpdir") will return null 
+		// see https://stackoverflow.com/questions/28674008/system-environment-variables-in-jetty-application
+		String savePath = env.getProperty("image.file.uploadpath",System.getProperty("image.file.uploadpath"));
+		//String savePath = System.getProperty("image.file.uploadpath");
 		Path uploadPath = Paths.get(savePath+relativeUploadDir);
 
 		if (!Files.exists(uploadPath)) {

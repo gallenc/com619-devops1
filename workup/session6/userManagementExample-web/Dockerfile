@@ -7,6 +7,13 @@ FROM jetty:10.0.17-jdk11
 USER root
 RUN apt-get update && apt-get install -y unzip
 
+# make shared directories and change ownership to jetty
+RUN mkdir /data-jetty-files
+RUN chown -R jetty:jetty /data-jetty-files
+
+RUN mkdir /var/lib/jetty/target
+RUN chown -R jetty:jetty /var/lib/jetty/target
+
 USER jetty
 
 ## downloads and unpacks cargo jetty deployer in web apps directory

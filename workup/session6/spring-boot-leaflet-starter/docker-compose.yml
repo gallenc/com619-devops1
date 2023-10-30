@@ -1,0 +1,28 @@
+# example locally deploying built application but also has deployer
+# example build deployer as part of docker compose https://github.com/zhao-lin-li/docker-compose-build/tree/master
+version: "3.2"
+
+volumes:
+  data-jetty-files: {}
+  data-jetty-logs: {}
+
+services: 
+    # rest simulator app runs on http://localhost:8080/
+    # cargo deployer runs on http://localhost:8080/cargo-jetty-deployer/
+    # see https://codehaus-cargo.github.io/cargo/Jetty+Remote+Deployer.html
+    # also https://www.baeldung.com/deploy-to-jetty
+    
+    restsimulator :
+        build: .
+        ports: 
+         - "8080:8080"
+        volumes:
+          # setting up log data storage (target is used in log4j2.xml)
+          - data-jetty-logs:/var/lib/jetty/target:rw
+          # setting up data files storage
+          - data-jetty-files:/data-jetty-files:rw
+          # setting up poperties for restsimulator app
+          - ./container-fs/jetty/start.d/restsimulator.ini:/var/lib/jetty/start.d/restsimulator.ini
+          # deploying built restsimulator war file directly into application
+          - ./target/spring-boot-leaflet-starter-0.0.1-SNAPSHOT.war:/var/lib/jetty/webapps/root.war
+

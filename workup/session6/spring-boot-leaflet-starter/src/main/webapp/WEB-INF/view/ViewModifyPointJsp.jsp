@@ -102,7 +102,20 @@
 				<button class="btn" type="submit">Modify / Create Point</button>
 			</form>
 
-
+<!-- adding photo -->
+        <!-- see https://www.codejava.net/frameworks/spring-boot/spring-boot-file-upload-tutorial -->
+        <div>
+           <label>Photo: </label>
+           <img src="./user-photos/${mapPoint.id}/${mapPoint.photoUrl}" alt="${mapPoint.name} ${mapPoint.id} image" width="100" height="100" />
+           
+           
+           <form action="./viewModifyPoint" method="POST" enctype="multipart/form-data">
+               <input class="btn" type="file" name="image" accept="image/png, image/jpeg" capture="camera">
+               <input type="hidden" name="pointId" value="${mapPoint.id}" />
+                <input type="hidden" name="action" value="updatePointPhoto">
+               <button class="btn" type="submit" >Update Photo</button>
+           </form>
+        </div>
 
 
 

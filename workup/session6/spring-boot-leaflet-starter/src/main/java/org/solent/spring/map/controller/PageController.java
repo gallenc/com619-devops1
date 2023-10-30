@@ -6,11 +6,14 @@ import org.solent.spring.map.repository.MapPointRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
@@ -19,6 +22,7 @@ import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
+import org.solent.spring.map.controller.FileUploadDAO;
 import org.solent.spring.map.model.MapPoint;
 
 /**
@@ -30,6 +34,9 @@ public class PageController {
 
 	@Autowired
 	MapPointRepository mapPointRepository;
+
+	@Autowired
+	FileUploadDAO fileUploadDao;
 
 	@RequestMapping("/")
 	public String homePage() {
@@ -58,6 +65,8 @@ public class PageController {
 			@RequestParam(value = "pointlat", required = false) String pointlat,
 			@RequestParam(value = "pointlon", required = false) String pointlon,
 			@RequestParam(value = "pointphotoUrl", required = false) String pointphotoUrl,
+			// used to upload the image file
+			@RequestParam(value = "image", required = false) MultipartFile multipartFile,
 
 			Model model) {
 		LOG.debug("/viewModifyPoint called: " + " action=" + action + " pointId=" + pointId + " pointName=" + pointName
@@ -122,9 +131,9 @@ public class PageController {
 				double lon = Double.parseDouble(pointlon);
 				mapPoint.setLat(lat);
 				mapPoint.setLng(lon);
-			} catch (Exception e ){
+			} catch (Exception e) {
 				LOG.error("cannot parse latitude or longitude", e);
-				errorMessage= "cannot parse latitude or longitude";
+				errorMessage = "cannot parse latitude or longitude";
 				model.addAttribute("errorMessage", errorMessage);
 				model.addAttribute("mapPoint", mapPoint);
 				return "ViewModifyPointJsp";
@@ -133,6 +142,38 @@ public class PageController {
 			// save or update
 			mapPoint = mapPointRepository.save(mapPoint);
 			return "redirect:/pointList";
+
+		} else if ("updatePointPhoto".equals(action)) {
+			if (pointId == null || pointId.isEmpty()) {
+				LOG.debug("updatePoint action called - no id so new point ");
+				// new point - create in database
+			} else {
+				LOG.debug("updatePoint called point id=" + pointId);
+				Long id = Long.valueOf(pointId);
+				Optional<MapPoint> mapPointOption = mapPointRepository.findById(id);
+				if (mapPointOption.isPresent()) {
+					mapPoint = mapPointOption.get();
+				} else {
+					LOG.error("errorMessage cannot find point id=" + pointId + " to update ");
+					model.addAttribute("errorMessage", "cannot find point id=" + pointId + " to update ");
+					return "redirect:/pointList";
+				}
+			}
+
+			// add photo to point
+			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+			mapPoint.setPhotoUrl(fileName);
+
+			mapPoint = mapPointRepository.save(mapPoint);
+
+			String relativeUploadDir = "/user-photos/" + mapPoint.getId();
+
+			try {
+				fileUploadDao.saveFile(relativeUploadDir, fileName, multipartFile);
+			} catch (IOException e) {
+				LOG.debug("problem saving file locally ", e);
+				message = "problem saving file locally " + e.getMessage();
+			}
 
 		} else {
 			errorMessage = "unknown action called: " + action;

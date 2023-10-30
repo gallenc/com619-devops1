@@ -15,9 +15,10 @@ public class MapPoint {
     private String category;
     private double lat;
     private double lng;
+    private String photoUrl;
 
 
-    @SuppressWarnings("unused")
+	@SuppressWarnings("unused")
     public MapPoint()
     {
     }
@@ -77,6 +78,13 @@ public class MapPoint {
         this.lng = lng;
     }
 
+    public String getPhotoUrl() {
+		return photoUrl;
+	}
+
+	public void setPhotoUrl(String photoUrl) {
+		this.photoUrl = photoUrl;
+	}
 
     @Override
     public String toString() {
@@ -87,6 +95,7 @@ public class MapPoint {
                 ", category='" + category + '\'' +
                 ", lat=" + lat +
                 ", lng=" + lng +
+                ", photo=" + photoUrl +
                 '}';
     }
 }

@@ -2,6 +2,8 @@ package org.solent.spring.map.controller;
 
 import java.util.Optional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.solent.spring.map.model.MapPoint;
 import org.solent.spring.map.repository.MapPointRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,7 @@ import io.swagger.v3.oas.annotations.Parameter;
  */
 @RestController
 public class MapPointRestController {
-	
+    final static Logger LOG = LogManager.getLogger(MapPointRestController.class);
 	
     @Autowired
     MapPointRepository mapPointRepository;

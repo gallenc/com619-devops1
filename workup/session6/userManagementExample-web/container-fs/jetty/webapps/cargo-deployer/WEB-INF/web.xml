@@ -33,7 +33,7 @@
     <init-param>
       <param-name>timeout</param-name>
       <param-value>30000</param-value>
-      <description>Deployment timeout (in milliseconds)</description>
+      <!-- Deployment timeout (in milliseconds) -->
     </init-param>
   </servlet>
 

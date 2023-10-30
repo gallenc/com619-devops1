@@ -12,6 +12,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  
+// see https://www.baeldung.com/spring-mvc-static-resources
 @Configuration
 public class MVCConfig implements WebMvcConfigurer {
     private static final Logger LOG = LogManager.getLogger(MVCConfig.class);
@@ -22,10 +23,10 @@ public class MVCConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
-       // exposeDirectory("/user-photos/", registry);
         exposeDirectory("user-photos", registry);
     }
      
+    // this exposes the files directory as a resource 
     private void exposeDirectory(String dirName, ResourceHandlerRegistry registry) {
 		
     	String savePath = env.getProperty("image.file.uploadpath",System.getProperty("image.file.uploadpath"));

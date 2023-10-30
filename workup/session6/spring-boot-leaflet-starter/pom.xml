@@ -180,6 +180,13 @@
          <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+               <environmentVariables>
+                  <!-- this is only used for  spring-boot:run instead of application.properties image.file.uploadpath=./target/archive-files -->
+                  <!-- resolves to file:/C:/devel/gitrepos/com619-devops1/workup/session6/userManagementExample-web/./target/user-photos/ -->
+                  <image.file.uploadpath>./target/archive-files</image.file.uploadpath>
+               </environmentVariables>
+            </configuration>
          </plugin>
 
          <plugin>

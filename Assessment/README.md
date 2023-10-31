@@ -29,7 +29,8 @@ If you are not yet on the list please form a team of 4 and notify Craig Gallen o
 
 ## sprint dates
 
-|-----|----|
+| dates | Description | session |
+|-----|----|----|
 |27,28 SEPT  | COURSE INTRO  | SESSION 1 |
 |4,5 OCT  |   |SESSION 2 |
 |11,12 OCT  |   |SESSION 3 |

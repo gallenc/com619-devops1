@@ -78,10 +78,24 @@ public class PageController {
 		MapPoint mapPoint = new MapPoint();
 
 		if ("deletePoint".equals(action)) {
-			Long id = Long.valueOf(pointId);
-			mapPointRepository.deleteById(id);
-			LOG.debug("deleted point id=" + pointId);
-			model.addAttribute("message", "deleted point id=" + pointId);
+			try {
+				Long id = Long.valueOf(pointId);
+				Optional<MapPoint> mapPointOption = mapPointRepository.findById(id);
+				if (mapPointOption.isPresent()) {
+					mapPoint = mapPointOption.get();
+					String oldFileName = mapPoint.getPhotoUrl();
+					String relativeUploadDir = "/user-photos/" + mapPoint.getId();
+					if (oldFileName != null && !oldFileName.isEmpty())
+						fileUploadDao.deleteIfExistsFile(relativeUploadDir, oldFileName);
+					mapPointRepository.deleteById(id);
+				}
+				model.addAttribute("message", "deleted point id=" + pointId);
+				LOG.debug("deleted point id=" + pointId);
+			} catch (IOException e) {
+				LOG.debug("problem deleting file locally ", e);
+				errorMessage = "problem saving file locally " + e.getMessage();
+			}
+
 			return "redirect:/pointList";
 
 		} else if ("newPoint".equals(action)) {
@@ -161,6 +175,7 @@ public class PageController {
 			}
 
 			// add photo to point
+			String oldFileName = mapPoint.getPhotoUrl();
 			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 			mapPoint.setPhotoUrl(fileName);
 
@@ -169,7 +184,10 @@ public class PageController {
 			String relativeUploadDir = "/user-photos/" + mapPoint.getId();
 
 			try {
-				fileUploadDao.saveFile(relativeUploadDir, fileName, multipartFile);
+				if (oldFileName != null && !oldFileName.isEmpty())
+					fileUploadDao.deleteIfExistsFile(relativeUploadDir, oldFileName);
+				if (fileName != null && !fileName.isEmpty())
+					fileUploadDao.saveFile(relativeUploadDir, fileName, multipartFile);
 			} catch (IOException e) {
 				LOG.debug("problem saving file locally ", e);
 				message = "problem saving file locally " + e.getMessage();

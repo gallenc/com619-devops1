@@ -92,17 +92,17 @@
 						</tr>
 						<tr>
 							<td>photoUrl</td>
-							<td><input type="text" name="pointphotoUrl"
-								value="${mapPoint.photoUrl}" /></td>
+							<td>${mapPoint.photoUrl}</td>
 						</tr>
 					</tbody>
 				</table>
 				<input type="hidden" name="pointId" value="${mapPoint.id}" />
+				<input type="hidden" name="pointphotoUrl" value="${mapPoint.photoUrl}" />
 				<input type="hidden" name="action" value="updatePoint">
 				<button class="btn" type="submit">Modify / Create Point</button>
 			</form>
 
-<!-- adding photo -->
+        <!-- adding photo -->
         <!-- see https://www.codejava.net/frameworks/spring-boot/spring-boot-file-upload-tutorial -->
         <div>
            <label>Photo: </label>

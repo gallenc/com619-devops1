@@ -488,6 +488,7 @@ public class UserAndLoginController {
         }
 
         User modifyUser = userList.get(0);
+        String oldFileName = modifyUser.getPhotoLink();
         
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         modifyUser.setPhotoLink(fileName);
@@ -497,7 +498,10 @@ public class UserAndLoginController {
         String relativeUploadDir = "/user-photos/" + modifyUser.getUsername();
  
         try {
-			fileUploadDao.saveFile(relativeUploadDir, fileName, multipartFile);
+        	if (oldFileName != null && !oldFileName.isEmpty())
+				fileUploadDao.deleteIfExistsFile(relativeUploadDir, oldFileName);
+			if (fileName != null && !fileName.isEmpty())
+			    fileUploadDao.saveFile(relativeUploadDir, fileName, multipartFile);
 		} catch (IOException e) {
 			LOG.debug("problem saving file locally ",e); 
 			message= "problem saving file locally "+ e.getMessage();

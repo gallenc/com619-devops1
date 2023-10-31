@@ -27,7 +27,7 @@ public class FileUploadDAO {
 		// note in jetty System.getProperty("java.io.tmpdir") will return null 
 		// see https://stackoverflow.com/questions/28674008/system-environment-variables-in-jetty-application
 		String savePath = env.getProperty("image.file.uploadpath",System.getProperty("image.file.uploadpath"));
-		//String savePath = System.getProperty("image.file.uploadpath");
+		
 		Path uploadPath = Paths.get(savePath+relativeUploadDir);
 
 		if (!Files.exists(uploadPath)) {
@@ -40,6 +40,21 @@ public class FileUploadDAO {
 			Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException ioe) {
 			throw new IOException("Could not save image file: " + fileName, ioe);
+		}
+	}
+	
+	public void deleteIfExistsFile(String relativeUploadDir, String fileName) throws IOException {
+		
+		String savePath = env.getProperty("image.file.uploadpath",System.getProperty("image.file.uploadpath"));
+
+		Path uploadPath = Paths.get(savePath+relativeUploadDir);
+
+		try  {
+			Path filePath = uploadPath.resolve(fileName);
+			LOG.debug("file delete path: "+filePath.toString());
+			Files.deleteIfExists(filePath);
+		} catch (IOException ioe) {
+			throw new IOException("Could not delete image file: " + fileName, ioe);
 		}
 	}
 }

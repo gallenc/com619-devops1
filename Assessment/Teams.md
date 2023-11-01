@@ -41,10 +41,10 @@
 | TBD         |             |              |             |                |             |
 |         |             |              |             |                |             |
 | Insert Team Name Here         | Iona Pitt   |  custardbunz1  |  6pitti03@solant.ac.uk           |                |             |
-|         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |                |             |
-|          | Blaise Tyree     |              |             |                |             |
-|         | William Sephton   |              |             |                |             |
-|          | Quin        |              |             |                |             |
+|         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |  https://github/willsephton/devops      |             |
+|          | Blaise Tyree     |  Blaiset21            |  5tyreb73@solent.ac.uk           |                |             |
+|         | William Sephton   | willsephton             |             |                |             |
+|          | Quinn  Toye      | quinntoye0             |   4toyeq57@solent.ac.uk          |                |             |
 |         |             |              |             |                |             |
 |          |             |              |             |                |             |
 | Wednesday class         |             |              |             |                |             |

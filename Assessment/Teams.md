@@ -38,7 +38,14 @@
 |          |  Owen Bradstreet | 5brado63@solent.ac.uk <BR> owenbradstreet |             |                |             |
 |          |  Luke Wood | 5woodl59@solent.ac.uk <BR> lwoodremote |             |                |             |
 |          |  Steve Dawe | 5dawes65@solent.ac.uk <BR> 5Dawe |             |                |             |
-| TBD         |             |              |             |                |             |
+|        |             |              |             |                |             |
+| dev        |  Banfia Bol  | Boldizsarb     |  https://github.com/Boldizsarb/Devops_com619      | com619.azurewebsites.net       |             |
+|          |   Filippe Quarntain   |  fmilheir         |             |                |             |
+|          | Oladapo Giwa-daramola         | oladapo01             | 5giwao61@solaent.ac.uk           |                |             |
+|          | Renato Silva Crdoso            |  guildb       | 5silvr53@solent.ac.uk            |                |             |
+|         |  Maciej Czerwonka           |   maciej           | 5czerm04@solent.ac.uk            |                |             |
+|          |             |              |             |                |             |
+|          |             |              |             |                |             |
 |         |             |              |             |                |             |
 | Insert Team Name Here         | Iona Pitt   |  custardbunz1  |  6pitti03@solant.ac.uk           |                |             |
 |         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |  https://github/willsephton/devops      |             |

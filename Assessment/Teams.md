@@ -9,11 +9,11 @@
 |             | Jakub Sepiolo |              |             |                |             |
 |             | Steve Dawe  |              |             |                |             |
 |             |             |              |             |                |             |
-| Coordinated Chaos        | Faizan Ahmed  |              |             |                |             |
-|             | Ali Dashti     |              |             |                |             |
-|             | Shivkumar Hithesh Thakkar  |              |             |                |             |
-|             | Thomas Strong   |              |             |                |             |
-|             | Joao Maria Fragoso Potes   |              |             |                |             |
+| Coordinated Chaos        | Faizan Ahmed  |  FaizanAhmadSP707            | 5ahmef94@solent.ac.uk           |             https://github.com/TomString/DevOpsAssessment    |             |
+|             | Ali Dashti     |  ali1373107            |             |   4dasha45 @solent.ac.uk            |             |
+|             | Shivkumar Hithesh Thakkar  | 5thaks07             | 5thaks07@solent.ac.uk            |                |             |
+|             | Thomas Strong   | TomStrong             |  5strot78@solent.ac.uk           |                |             |
+|             | Joao Maria Fragoso Potes   | Joao-Potes           | 4fragi68@ssolent.ac.uk            |                |             |
 |             |             |              |             |                |             |
 | Drop table * |  Harry Maynard |              |  https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |
 |             |  Senju Murase   |              |             |                |             |

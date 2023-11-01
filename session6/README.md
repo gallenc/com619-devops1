@@ -2,6 +2,8 @@
 
 ## Introduction
 
+(See the session video here [Session 6 Securing Cargo and uploading images](https://youtu.be/HNePSydVxZI))
+
 The examples so far have provided a starting applications for creating a map and managing user accounts. 
 One option for building you application would be to re-factor and merge these examples before adding extra functionality.
 

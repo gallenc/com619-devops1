@@ -27,7 +27,7 @@
 |             | Muhammad Sajid | AhubSajid       |             |                |             |             |
 |             | Josh Clarke | JoshC98         |             |                |             |             |
 |          |             |              |             |                |             |             |
-| Mongoose | Theodoros Christou  |   |  https://github.com/GoodH21/DevOps-Group  (not public) <br> https://github.com/GoodH21/com619-devops1         |                | http://com619-mongeese.uksouth.cloudapp.azure.com:3000            |             |
+| Mongoose | Theodoros Christou  |   |        |  https://github.com/GoodH21/DevOps-Group  (not public) <br> https://github.com/GoodH21/com619-devops1                 | http://com619-mongeese.uksouth.cloudapp.azure.com:3000            |             |
 |          |Arooj Fatima |              |             |                |             |             |
 |          |Harriet Goodyear | GoodH21             |             |                |             |             |
 |          |Maye Hunt |              |             |                |             |             |             |

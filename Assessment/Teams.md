@@ -9,8 +9,8 @@
 |             | Jakub Sepiolo |              |             |                |             |             |
 |             | Steve Dawe  |              |             |                |             |             |
 |             |             |              |             |                |             |             |
-| Coordinated Chaos | Faizan Ahmed  |  FaizanAhmadSP707    | 5ahmef94@solent.ac.uk    |   [https://github.com/TomStrong/DevOpsAssessment](https://github.com/TomStrong/DevOpsAssessment)    |             |   |
-|             | Ali Dashti     |  ali1373107            |             |   4dasha45 @solent.ac.uk            |             |             |
+| Coordinated Chaos | Faizan Ahmed  |  FaizanAhmadSP707    | 5ahmef94@solent.ac.uk    |   [https://github.com/TomStrong/DevOpsAssessment](https://github.com/TomStrong/DevOpsAssessment)    |             |  https://coordinated-chaos.uksouth.cloudapp.azure.com |
+|             | Ali Dashti     |  ali1373107            |   4dasha45 @solent.ac.uk            |             |             |             |
 |             | Shivkumar Hithesh Thakkar  | 5thaks07             | 5thaks07@solent.ac.uk            |                |             |             |
 |             | Thomas Strong   | TomStrong             |  5strot78@solent.ac.uk           |                |             |             |
 |             | Joao Maria Fragoso Potes   | Joao-Potes           | 4fragi68@ssolent.ac.uk            |                |             |             |

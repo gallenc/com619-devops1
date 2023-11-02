@@ -37,10 +37,11 @@ If you are not yet on the list please form a team of 4 and notify Craig Gallen o
 |18,19 OCT  | first sprint  |SESSION 4 |
 |25,26 OCT  |   |SESSION 5|
 |1,2 OCT  |   |SESSION 6|
-|16,17 NOV | second sprint|SESSION 7 |
-|22,23 NOV  |   |SESSION 8 |
-|29,30 NOV  |   |SESSION 9 |
-|6,7 DEC  | final sprint |SESSION 10 |
+|8,9 OCT  |   |SESSION 7|
+|16,17 NOV | second sprint|SESSION 8 |
+|22,23 NOV  |   |SESSION 9 |
+|29,30 NOV  |   |SESSION 10|
+|6,7 DEC  | final sprint |SESSION 11 |
 |13,14 DEC  |   |
 |15 DEC | handin presentation |
 |12 JAN | personal report |

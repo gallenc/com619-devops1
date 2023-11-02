@@ -34,10 +34,10 @@
 |          |Georgios Kleitou |              |             |                |             |             |
 |          |             |              |             |                |             |             |
 | Git Guardians |Jakub Sepiolo |              | 5sepij35@solent.ac.uk <BR> jakubsepiolo2001 |  https://github.com/jakubsepiolo2001/COM619-AE1/           |  https://github.com/users/jakubsepiolo2001/projects/1              |             |           
-|          |  Tyler Short | 5short82@solent.ac.uk <BR> Tyler-Short1 |             |                |             |             |
-|          |  Owen Bradstreet | 5brado63@solent.ac.uk <BR> owenbradstreet |             |                |             |             |
-|          |  Luke Wood | 5woodl59@solent.ac.uk <BR> lwoodremote |             |                |             |             |
-|          |  Steve Dawe | 5dawes65@solent.ac.uk <BR> 5Dawe |             |                |             |             |
+|          |  Tyler Short |  Tyler-Short1 |  5short82@solent.ac.uk            |                |             |             |
+|          |  Owen Bradstreet |  owenbradstreet | 5brado63@solent.ac.uk             |                |             |             |
+|          |  Luke Wood |  lwoodremote |  5woodl59@solent.ac.uk           |                |             |             |
+|          |  Steve Dawe |  5Dawe |  5dawes65@solent.ac.uk            |                |             |             |
 |        |             |              |             |                |             |             |
 | dev        |  Banfia Bol  | Boldizsarb     |  https://github.com/Boldizsarb/Devops_com619      | com619.azurewebsites.net       |             |             |
 |          |   Filippe Quarntain   |  fmilheir         |             |                |             |             |

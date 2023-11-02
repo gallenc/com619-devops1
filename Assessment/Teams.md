@@ -9,7 +9,7 @@
 |             | Jakub Sepiolo |              |             |                |             |
 |             | Steve Dawe  |              |             |                |             |
 |             |             |              |             |                |             |
-| Coordinated Chaos        | Faizan Ahmed  |  FaizanAhmadSP707            | 5ahmef94@solent.ac.uk           |             https://github.com/TomString/DevOpsAssessment    |             |
+| Coordinated Chaos        | Faizan Ahmed  |  FaizanAhmadSP707            | 5ahmef94@solent.ac.uk           |             [https://github.com/TomStrong/DevOpsAssessment](https://github.com/TomStrong/DevOpsAssessment)    |             |
 |             | Ali Dashti     |  ali1373107            |             |   4dasha45 @solent.ac.uk            |             |
 |             | Shivkumar Hithesh Thakkar  | 5thaks07             | 5thaks07@solent.ac.uk            |                |             |
 |             | Thomas Strong   | TomStrong             |  5strot78@solent.ac.uk           |                |             |
@@ -48,7 +48,7 @@
 |          |             |              |             |                |             |
 |         |             |              |             |                |             |
 | Insert Team Name Here         | Iona Pitt   |  custardbunz1  |  6pitti03@solant.ac.uk           |                |             |
-|         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |  https://github/willsephton/devops      |             |
+|         |  Kyle Roberts           |  kyleroberts27      |  6robk81@solent.ac.uk           |  [https://github/willsephton/devops](https://github.com/willsephton/devops)      |             |
 |          | Blaise Tyree     |  Blaiset21            |  5tyreb73@solent.ac.uk           |                |             |
 |         | William Sephton   | willsephton             |             |                |             |
 |          | Quinn  Toye      | quinntoye0             |   4toyeq57@solent.ac.uk          |                |             |

@@ -24,3 +24,7 @@ see https://blog.entek.org.uk/notes/2021/09/30/docker-compose-with-systemd.html
 
 web site monitoring
 https://github.com/gallenc/opennms-integrations-play/tree/main/websitemonitoring
+
+https://hackmd.io/@agalue/HyGyD0diN  opennms letsencrypt cloud init
+
+

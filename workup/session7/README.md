@@ -27,4 +27,5 @@ https://github.com/gallenc/opennms-integrations-play/tree/main/websitemonitoring
 
 https://hackmd.io/@agalue/HyGyD0diN  opennms letsencrypt cloud init
 
+https://medium.com/nirman-tech-blog/nginx-as-reverse-proxy-with-grpc-820d35642bff
 

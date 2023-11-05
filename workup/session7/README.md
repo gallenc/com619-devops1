@@ -19,3 +19,4 @@ https://stackoverflow.com/questions/70843940/springdoc-openapi-ui-how-do-i-set-t
 server.forward-headers-strategy=framework
 
 to do - start docker-compose as a service - system d script
+see https://blog.entek.org.uk/notes/2021/09/30/docker-compose-with-systemd.html

@@ -29,3 +29,4 @@ https://hackmd.io/@agalue/HyGyD0diN  opennms letsencrypt cloud init
 
 https://medium.com/nirman-tech-blog/nginx-as-reverse-proxy-with-grpc-820d35642bff
 
+https://github.com/opennms-forge/stack-play/tree/cada4b5b39edd3f745d514aeaf4cce3f12fdef18/minimal-minion-grpc

@@ -35,10 +35,12 @@ My example includes running a jetty server instead of node.js.
 [com619 letsencrypt-docker-compose](https://github.com/gallenc/letsencrypt-docker-compose/tree/com619-1)
 (Note that my example is in the com619-1 branch). 
 
-THis example will set up nginx and letsencrypt in a docker compose project with a jetty cargo based deployer. 
+This example will set up nginx and letsencrypt in a docker compose project with a jetty cargo based deployer. 
 The example includes a simple jsp app which can be deployed to the server.
 
-## modifications to jetty and spring-boot examples
+## Modifications to jetty and spring-boot examples
+
+
 
 
 # Setting up letsencrypt

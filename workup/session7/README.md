@@ -53,7 +53,35 @@ client_max_body_size 100M;
 When your server re-starts, you presently have to manually re-start the docker compose applications. 
 This is not desirable in production. 
 Instead, we create a simple systemd script to start up docker-compose when the system starts. 
-THe example is based on the simple example here: [docker compose with systemd](https://blog.entek.org.uk/notes/2021/09/30/docker-compose-with-systemd.html)
+The example is based on the simple example here: [docker compose with systemd](https://blog.entek.org.uk/notes/2021/09/30/docker-compose-with-systemd.html)
+
+This systemd file goes in /etc/systemd/system/docker-compose@.service:
+```
+[Unit]
+Description=%i service with docker compose
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/opt/%i
+ExecStart=/usr/bin/docker-compose up -d --remove-orphans
+ExecStop=/usr/bin/docker-compose down
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To configure the application (e.g. my-app), with a docker-compose.yml in the corresponding directory (e.g. /opt/my-app/docker-compose.yml), to start on boot, we simply enable a systemd unit for this template:
+```
+systemctl enable docker-compose@my-app
+```
+And to start it:
+```
+systemctl start docker-compose@my-app
+```
+This same mechanism can be used for multiple docker-compose apps in the /opt/ directory.
 
 ## Modifications to jetty and spring-boot examples
 Both of the previous examples have been modified to allow them to run behind the nginx proxy

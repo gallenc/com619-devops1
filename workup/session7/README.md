@@ -16,7 +16,7 @@ However we can obtain free certificates from [Letsencrypt](https://letsencrypt.o
 Letsencrypt certificates are obtained automatically using an application called certbot and they must be renewed every 3 months. 
 The certificates are downloaded and passed to our web server to validate our https connections.
 
-## Docker Compose configurations
+## Example Docker Compose configurations and tutorials
 
 In our example, we will host  our application in one container, nginx in a second container, and certbot in a third container.
 There are many tutorials and code examples available and some are listed below.
@@ -25,14 +25,20 @@ There are many tutorials and code examples available and some are listed below.
 
 [Setting up Nginx Webserver with letsencrypt on Docker](https://phoenixnap.com/kb/letsencrypt-docker)
 
-[Nginx and Let’s Encrypt with Docker in Less Than 5 Minutes](https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71) [github project](https://github.com/wmnnd/nginx-certbot) Note: replace docker-compose with docker compose if needed.
+[Nginx and Let’s Encrypt with Docker in Less Than 5 Minutes](https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71) [github project](https://github.com/wmnnd/nginx-certbot) (Note: replace `docker-compose` with `docker compose` if needed).
 
-However, I have personally adoped and adapted a more complex example which allows me to run a script to generate my certificates for multiple   different back ends. 
+## Class example
+I have personally adoped and adapted a more complex example which allows me to run a script to generate my certificates for multiple  different back ends. 
 This is a fork of an example by [eugene-khyst](https://github.com/eugene-khyst/letsencrypt-docker-compose).
-However my example includes running a jetty server instead of node.js.
+My example includes running a jetty server instead of node.js.
 
 [com619 letsencrypt-docker-compose](https://github.com/gallenc/letsencrypt-docker-compose/tree/com619-1)
-Note that my example is in the com619-1 branch. 
+(Note that my example is in the com619-1 branch). 
+
+THis example will set up nginx and letsencrypt in a docker compose project with a jetty cargo based deployer. 
+The example includes a simple jsp app which can be deployed to the server.
+
+## modifications to jetty and spring-boot examples
 
 
 # Setting up letsencrypt

@@ -38,31 +38,48 @@ My example includes running a jetty server instead of node.js.
 This example will set up nginx and letsencrypt in a docker compose project with a jetty cargo based deployer. 
 The example includes a simple jsp app which can be deployed to the server.
 
+Note that the cargo deployer requires that the nginx configuration allows large uploads. 
+Otherwise, nginx will respond with the message
+
+```
+HTTP request failed, response code: 413, response message: Request Entity Too Large,
+```
+This is fixed by adding the following line to the nginx configuration
+```
+client_max_body_size 100M;
+```
+## starting docker-compose as a service
+
+When your server re-starts, you presently have to manually re-start the docker compose applications. 
+This is not desirable in production. 
+Instead, we create a simple systemd script to start up docker-compose when the system starts. 
+THe example is based on the simple example here: [docker compose with systemd](https://blog.entek.org.uk/notes/2021/09/30/docker-compose-with-systemd.html)
+
 ## Modifications to jetty and spring-boot examples
+Both of the previous examples have been modified to allow them to run behind the nginx proxy
+
+[spring-boot-leaflet-starter](../session7/spring-boot-leaflet-starter)
+
+[userManagementExample-web](../session7/userManagementExample-web)
+
+The important change is to the spring boot configuration so that the swagger UI examples use https and not just http when behind a proxy.
+(see [springdoc openapi-ui how do I set the request to https](https://stackoverflow.com/questions/70843940/springdoc-openapi-ui-how-do-i-set-the-request-to-https)
+```
+# add to application.properties
+# allows ngnx to forward https for swagger
+server.forward-headers-strategy=framework
+```
 
 
 
-
-# Setting up letsencrypt
-
-see my example https://github.com/gallenc/letsencrypt-docker-compose/tree/com619-1
-
-based upon https://github.com/eugene-khyst/letsencrypt-docker-compose 
+# Misc note Setting up letsencrypt
 
 need to allow large uploads
 need to allow reverse proxy
 added a simple web app to deploy 
 
-in the spring applications - need to have swagger ui do https
-
-https://stackoverflow.com/questions/70843940/springdoc-openapi-ui-how-do-i-set-the-request-to-https
-server.forward-headers-strategy=framework
-
-to do - start docker-compose as a service - system d script
-see https://blog.entek.org.uk/notes/2021/09/30/docker-compose-with-systemd.html
-
-
-web site monitoring
+##  web site monitoring
+to do -separat discussion
 https://github.com/gallenc/opennms-integrations-play/tree/main/websitemonitoring
 
 https://hackmd.io/@agalue/HyGyD0diN  opennms letsencrypt cloud init

@@ -69,12 +69,12 @@ superputty https://www.puttygen.com/superputty
 sudo yum update
 
 # install nano editor and git and net-tools (ifconfig)
-sudo yum install nano
-sudo yum install git
-sudo yum install net-tools
+sudo yum install -y nano
+sudo yum install -y git
+sudo yum install -y net-tools
 
 # install java 11
-sudo yum install java-11-openjdk java-11-openjdk-devel
+sudo yum install -y java-11-openjdk java-11-openjdk-devel
 
 # check java 11 installed using 
 java -version
@@ -85,7 +85,7 @@ sudo update-alternatives --config java
 sudo update-alternatives --config javac
 
 # install maven
-sudo yum install maven
+sudo yum install -y maven
 
 # maven will install and prefer java 8 - we need to change this to java 11
 # create and edit a new file /etc/java/maven.conf
@@ -113,8 +113,8 @@ mvn -version
 
 # install docker depo and docker and docker-compose
 sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo dnf install docker-ce docker-ce-cli containerd.io
-sudo dnf install docker-compose-plugin
+sudo dnf install -y docker-ce docker-ce-cli containerd.io
+sudo dnf install -y docker-compose-plugin
 
 # allow user to run docker outside of root 
 sudo usermod -aG docker $(whoami)

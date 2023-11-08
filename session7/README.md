@@ -98,20 +98,6 @@ The important change is to the spring boot configuration so that the swagger UI 
 server.forward-headers-strategy=framework
 ```
 
-
-
-# Misc note Setting up letsencrypt
-
-need to allow large uploads
-need to allow reverse proxy
-added a simple web app to deploy 
-
-##  web site monitoring
-to do -separat discussion
-https://github.com/gallenc/opennms-integrations-play/tree/main/websitemonitoring
-
-https://hackmd.io/@agalue/HyGyD0diN  opennms letsencrypt cloud init
-
 https://medium.com/nirman-tech-blog/nginx-as-reverse-proxy-with-grpc-820d35642bff
 
 https://github.com/opennms-forge/stack-play/tree/cada4b5b39edd3f745d514aeaf4cce3f12fdef18/minimal-minion-grpc

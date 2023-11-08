@@ -28,7 +28,7 @@ Please read and follow the Getting Started instructions before doing anything el
 
 [session6](../main/session6/) Securing Cargo deploy and uploading images for viewing
 
-[session7](../main/session7/) 
+[session7](../main/session7/) https/TLS using Nginx and Letsencrypt
 
 [session8](../main/session8/) 
 

@@ -106,4 +106,25 @@ mvn cargo:undeploy
 If you deploy the app it will show up at http://localhost:8080/
 
 
-Note that you probably need to go further and secure the deployer using authentication and https (behind a proxy)
+## New deploy mechanism
+
+The pom has changed to allow cargo to pick up properties from a properties file.
+
+You need to copy `deploy.properties.template` to `deploy.properties`  and change the values to match your site.
+
+The `mvn initialize` goal reads the properties file so when deploying use the command
+
+```
+mvn initialize cargo:deploy
+
+mvn initialize cargo:undeploy
+```
+
+or if doing a full build `initialize` is called after clean and before install
+
+```
+
+mvn clean install cargo:deploy
+```
+
+

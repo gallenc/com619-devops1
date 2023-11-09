@@ -99,7 +99,7 @@ server.forward-headers-strategy=framework
 ```
 
 ## New deploy mechanisms
-In both the example projects, the pom has changed to alllow cargo to pick up properties from a properties file.
+In both the example projects, the pom has changed to allow cargo to pick up properties from a properties file.
 
 You need to copy `deploy.properties.template` to `deploy.properties`  and change the values to match your site.
 

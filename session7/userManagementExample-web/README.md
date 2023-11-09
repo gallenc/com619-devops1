@@ -81,4 +81,26 @@ You can also test the app using the RESTer plugin for firefox or chrome.
 This allows you to create any http or https request and add authentication to it.
 
 
+## New deploy mechanism
+
+The pom has changed to allow cargo to pick up properties from a properties file.
+
+You need to copy `deploy.properties.template` to `deploy.properties`  and change the values to match your site.
+
+The `mvn initialize` goal reads the properties file so when deploying use the command
+
+```
+mvn initialize cargo:deploy
+
+mvn initialize cargo:undeploy
+```
+
+or if doing a full build `initialize` is called after clean and before install
+
+```
+
+mvn clean install cargo:deploy
+```
+
+
 

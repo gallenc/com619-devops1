@@ -15,11 +15,11 @@
 |             | Thomas Strong   | TomStrong             |  5strot78@solent.ac.uk           |                |             |             |
 |             | Joao Maria Fragoso Potes   | Joao-Potes           | 4fragi68@ssolent.ac.uk            |                |             |             |
 |             |             |              |             |                |             |
-| Drop table * |  Harry Maynard |              |               | https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |  
-|             |  Senju Murase   |              |             |                |             |             |
-|             |  Dario Cruz  |              |             |                |             |             |
-|             |  Igor Kanchukovskyi       |              |             |                |             |             |
-|             | Hamza Mohibe |              |             |                |             |             |
+| Drop table * |  Harry Maynard | 4maynh59             |               | https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |  
+|             |  Senju Murase   | jrykns  |             |                |             |             |
+|             |  Dario Cruz  | dariocruz96   |             |                |             |             |
+|             |  Igor Kanchukovskyi       | IgorGrey  |             |                |             |             |
+|             | Hamza Mohibe |  HamzaMohibe  |             |                |             |             |
 |             |             |              |             |                |             |             |
 | TBC?        | Gaetano Archer | GDoesCode     |              | https://github.com/GDoesCode/COM619DevOpsGroupWork   | https://github.com/users/GDoesCode/projects/1    |                    |
 |             | Jacob Shattock | jacob-shattock-solent  |             |                |             |             |

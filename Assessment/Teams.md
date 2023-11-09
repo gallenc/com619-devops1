@@ -16,7 +16,7 @@
 |             | Joao Maria Fragoso Potes   | Joao-Potes           | 4fragi68@ssolent.ac.uk            |                |             |             |
 |             |             |              |             |                |             |
 | Drop table * |  Harry Maynard | 4maynh59             |               | https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |  
-|             |  Senju Murase   | jrykns  |             |                |             |             |
+|             |  Senju Murase   | jrykns  |  2muras86@solent.ac.uk    |                |             |             |
 |             |  Dario Cruz  | dariocruz96   |             |                |             |             |
 |             |  Igor Kanchukovskyi       | IgorGrey  |             |                |             |             |
 |             | Hamza Mohibe |  HamzaMohibe  |             |                |             |             |

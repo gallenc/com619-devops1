@@ -44,7 +44,7 @@
 |          |   Filippe Quarntain   |  fmilheir         |  5bastf99@solent.ac.uk           |                |             |             |
 |          | Oladapo Giwa-daramola         | oladapo01             | 5giwao61@solaent.ac.uk           |                |             |             |
 |          | Renato Silva Crdoso            |  guildb       | 5silvr53@solent.ac.uk            |                |             |             |
-|         |  Maciej Czerwonka           |   maciej           | 5czerm04@solent.ac.uk            |                |             |             |
+|         |  Maciej Czerwonka           |   MCoding90           | 5czerm04@solent.ac.uk            |                |             |             |
 |          |             |              |             |                |             |             |
 |          |             |              |             |                |             |             |
 |         |             |              |             |                |             |             |

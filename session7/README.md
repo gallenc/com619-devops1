@@ -98,6 +98,14 @@ The important change is to the spring boot configuration so that the swagger UI 
 server.forward-headers-strategy=framework
 ```
 
-https://medium.com/nirman-tech-blog/nginx-as-reverse-proxy-with-grpc-820d35642bff
+## New deploy mechanisms
+In both the example projects, the pom has changed to alllow cargo to pick up properties from a properties file.
 
-https://github.com/opennms-forge/stack-play/tree/cada4b5b39edd3f745d514aeaf4cce3f12fdef18/minimal-minion-grpc
+You need to copy `deploy.properties.template` to `deploy.properties`  and change the values to match your site.
+
+The `mvn initialize` goal reads the properties file so when deploying use the command
+
+```
+mvn initialize cargo:deploy
+```
+

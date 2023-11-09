@@ -40,8 +40,8 @@
 |          |  Luke Wood |  lwoodremote |  5woodl59@solent.ac.uk           |                |             |             |
 |          |  Steve Dawe |  5Dawe |  5dawes65@solent.ac.uk            |                |             |             |
 |        |             |              |             |                |             |             |
-| dev        |  Banfia Bol  | Boldizsarb     |       | https://github.com/Boldizsarb/Devops_com619      |     com619.azurewebsites.net          |             |
-|          |   Filippe Quarntain   |  fmilheir         |             |                |             |             |
+| dev        |  Banfia Bol  | Boldizsarb     | 5boldb36@solent.ac.uk      | https://github.com/Boldizsarb/Devops_com619      |     com619.azurewebsites.net          |             |
+|          |   Filippe Quarntain   |  fmilheir         |  5bastf99@solent.ac.uk           |                |             |             |
 |          | Oladapo Giwa-daramola         | oladapo01             | 5giwao61@solaent.ac.uk           |                |             |             |
 |          | Renato Silva Crdoso            |  guildb       | 5silvr53@solent.ac.uk            |                |             |             |
 |         |  Maciej Czerwonka           |   maciej           | 5czerm04@solent.ac.uk            |                |             |             |

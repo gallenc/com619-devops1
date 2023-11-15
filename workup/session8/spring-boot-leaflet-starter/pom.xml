@@ -34,7 +34,7 @@
 
       <!-- cargo -->
       <cargo.plugin.version>1.10.9</cargo.plugin.version>
-      
+
       <!-- use properties file or uncomment here. Note override setting doesn't work in properties-maven-plugin -->
       <!-- <remote.cargo.hostname>127.0.0.1</remote.cargo.hostname> -->
       <!-- <remote.cargo.servlet.port>8080</remote.cargo.servlet.port> -->
@@ -181,6 +181,14 @@
          <artifactId>hamcrest-core</artifactId>
          <scope>test</scope>
       </dependency>
+
+      <!-- This is necessary if you're using JUnit 4 with the latest Spring Boot version -->
+      <dependency>
+         <groupId>org.junit.vintage</groupId>
+         <artifactId>junit-vintage-engine</artifactId>
+         <scope>test</scope>
+      </dependency>
+
    </dependencies>
 
    <build>
@@ -190,13 +198,26 @@
             <artifactId>spring-boot-maven-plugin</artifactId>
             <configuration>
                <environmentVariables>
-                  <!-- this is only used for  spring-boot:run instead of application.properties image.file.uploadpath=./target/archive-files -->
+                  <!-- this is only used for spring-boot:run instead of application.properties image.file.uploadpath=./target/archive-files -->
                   <!-- resolves to file:/C:/devel/gitrepos/com619-devops1/workup/session6/userManagementExample-web/./target/user-photos/ -->
                   <image.file.uploadpath>./target/archive-files</image.file.uploadpath>
                </environmentVariables>
             </configuration>
          </plugin>
-         
+
+         <!-- surefire plugin runs junit tests during test phase but excludes integration tests -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+               <excludes>
+                  <exclude>**/*IT.java</exclude>
+               </excludes>
+            </configuration>
+         </plugin>
+
+
+
          <!-- see https://www.mojohaus.org/properties-maven-plugin/ -->
          <!-- note useDefaultValues default values doesn't work as expected so not used -->
          <plugin>
@@ -212,14 +233,14 @@
                   <configuration>
                      <quiet>false</quiet>
                      <files>
-                        <!--  copy and modify deploy.properties.template to deploy.properties -->
+                        <!-- copy and modify deploy.properties.template to deploy.properties -->
                         <file>./deploy.properties</file>
                      </files>
                   </configuration>
                </execution>
             </executions>
          </plugin>
-         
+
 
          <!-- to read properties file you must use mvn initialize cargo:deploy -->
          <plugin>
@@ -265,7 +286,56 @@
       </plugins>
 
 
+
    </build>
+
+   <!-- integration testing profile -->
+   <profiles>
+      <profile>
+         <id>integration</id>
+         <build>
+            <plugins>
+
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-antrun-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>download-files</id>
+                        <phase>initialize</phase>
+                        <goals>
+                           <goal>run</goal>
+                        </goals>
+                        <configuration>
+                           <target name="downloadfiles">
+                              <ant antfile="build.xml">
+                                 <target name="download-drivers" />
+                              </ant>
+                           </target>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+
+
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-failsafe-plugin</artifactId>
+                  <version>3.2.2</version>
+                  <!-- works with *IT.java -->
+                  <executions>
+                     <execution>
+                        <goals>
+                           <goal>integration-test</goal>
+                           <goal>verify</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+   </profiles>
 
 
 </project>

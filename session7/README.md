@@ -28,7 +28,7 @@ There are many tutorials and code examples available and some are listed below.
 [Nginx and Let’s Encrypt with Docker in Less Than 5 Minutes](https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71) [github project](https://github.com/wmnnd/nginx-certbot) (Note: replace `docker-compose` with `docker compose` if needed).
 
 ## Class example
-I have personally adoped and adapted a more complex example which allows me to run a script to generate my certificates for multiple  different back ends. 
+I have personally adopted and adapted a more complex example which allows me to run a script to generate my certificates for multiple  different back ends. 
 This is a fork of an example by [eugene-khyst](https://github.com/eugene-khyst/letsencrypt-docker-compose).
 My example includes running a jetty server instead of node.js.
 

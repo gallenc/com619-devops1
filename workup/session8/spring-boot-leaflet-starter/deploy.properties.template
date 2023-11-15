@@ -1,0 +1,9 @@
+# properties used by cargo to deploy application
+# rewrite this template as deploy.properties
+
+remote.cargo.hostname=127.0.0.1
+remote.cargo.servlet.port=8080
+remote.cargo.protocol=http
+remote.cargo.remote.username=someusername
+remote.cargo.remote.password=somepassword
+remote.cargo.remote.context=/

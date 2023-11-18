@@ -21,7 +21,8 @@
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-      <java.version>1.8</java.version>
+      <maven.compiler.source>11</maven.compiler.source>
+      <maven.compiler.target>11</maven.compiler.target>
 
       <springdoc.version>1.7.0</springdoc.version>
 
@@ -42,9 +43,108 @@
       <!-- <remote.cargo.remote.username>someusername</remote.cargo.remote.username> -->
       <!-- <remote.cargo.remote.password>somepassword</remote.cargo.remote.password> -->
 
+      <selenium-java-version>3.14.0</selenium-java-version>
+      <!-- <selenium-java-version>4.1.4</selenium-java-version> -->
+      <webdrivermanager-version>4.2.2</webdrivermanager-version>
+
    </properties>
 
    <dependencies>
+
+      <!-- <dependency> -->
+      <!-- <groupId>net.lightbody.bmp</groupId> -->
+      <!-- <artifactId>browsermob-core</artifactId> -->
+      <!-- <version>2.1.5</version> -->
+      <!-- <scope>test</scope> -->
+      <!-- </dependency> -->
+
+      <!-- selenium drivers -->
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-edge-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-ie-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-opera-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-safari-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-chrome-driver</artifactId>
+            </exclusion>
+         </exclusions>
+
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-api</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-remote-driver</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-support</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-firefox-driver</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>com.squareup.okhttp3</groupId>
+         <artifactId>okhttp</artifactId>
+         <version>3.10.0</version>
+         <scope>test</scope>
+      </dependency>
+
+
+      <dependency>
+         <groupId>io.github.bonigarcia</groupId>
+         <artifactId>webdrivermanager</artifactId>
+         <version>${webdrivermanager-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <!-- needed for FirfoxDriver -->
+<!--       <dependency> -->
+<!--          <groupId>com.google.guava</groupId> -->
+<!--          <artifactId>guava</artifactId> -->
+<!--          <version>23.0</version> -->
+<!--          <scope>test</scope> -->
+<!--       </dependency> -->
+
+
+
+
+
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -136,6 +236,10 @@
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-logging</artifactId>
             </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-java</artifactId>
+            </exclusion>
          </exclusions>
       </dependency>
 
@@ -171,14 +275,21 @@
       </dependency>
 
       <!-- junit dependencies -->
+      <!-- <dependency> -->
+      <!-- <groupId>junit</groupId> -->
+      <!-- <artifactId>junit</artifactId> -->
+      <!-- <scope>test</scope> -->
+      <!-- </dependency> -->
       <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
+         <version>${junit.version}</version>
          <scope>test</scope>
       </dependency>
       <dependency>
          <groupId>org.hamcrest</groupId>
          <artifactId>hamcrest-core</artifactId>
+         <version>${hamcrest-core.version}</version>
          <scope>test</scope>
       </dependency>
 
@@ -188,6 +299,7 @@
          <artifactId>junit-vintage-engine</artifactId>
          <scope>test</scope>
       </dependency>
+
 
    </dependencies>
 

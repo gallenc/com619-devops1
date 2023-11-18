@@ -1,4 +1,4 @@
-package org.solent.com619.devops.selenium.test;
+package org.solent.spring.map.integration.test;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -12,27 +12,17 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.Keys;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-public class MapTest1 {
-	private  Logger LOG = LoggerFactory.getLogger(MapTest1.class);
+
+public class MapApplictionIntegration2IT {
+	private  Logger LOG = LoggerFactory.getLogger(MapApplictionIntegration2IT.class);
 	
 	private WebDriver driver;
 	private Map<String, Object> vars;
@@ -62,9 +52,6 @@ public class MapTest1 {
 
 		driver = new FirefoxDriver(firefoxOptions);
 		LOG.debug("setUp() 5");
-
-		LOG.debug("setUp() 6");
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 		
 		js = (JavascriptExecutor) driver;
@@ -73,10 +60,12 @@ public class MapTest1 {
 
 	@After
 	public void tearDown() {
+		LOG.debug("quitting driver");
 		driver.quit();
 	}
 
 	public String waitForWindow(int timeout) {
+		LOG.debug("waiting for window ms: "+timeout);
 		try {
 			Thread.sleep(timeout);
 		} catch (InterruptedException e) {
@@ -90,7 +79,7 @@ public class MapTest1 {
 		return whNow.iterator().next();
 	}
 
-//	@Test
+	@Test
 	public void pointTest() {
 		driver.get("http://localhost:8080/");
 		driver.manage().window().setSize(new Dimension(1095, 797));
@@ -108,17 +97,4 @@ public class MapTest1 {
 		driver.findElement(By.cssSelector(".execute")).click();
 		driver.findElement(By.cssSelector(".execute")).click();
 	}
-	
-	  @Test
-	  public void untitled() {
-	    driver.get("http://localhost:8080/");
-	    driver.manage().window().setSize(new Dimension(1095, 799));
-	    vars.put("window_handles", driver.getWindowHandles());
-	    driver.findElement(By.linkText("Swagger (OpenAPI) UI")).click();
-	    vars.put("win6278", waitForWindow(2000));
-	    driver.switchTo().window(vars.get("win6278").toString());
-	    driver.findElement(By.cssSelector("#operations-map-point-rest-controller-list .opblock-summary-method")).click();
-	    driver.findElement(By.cssSelector(".btn")).click();
-	    driver.findElement(By.cssSelector(".execute")).click();
-	  }
 }

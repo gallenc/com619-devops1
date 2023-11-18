@@ -51,100 +51,6 @@
 
    <dependencies>
 
-      <!-- <dependency> -->
-      <!-- <groupId>net.lightbody.bmp</groupId> -->
-      <!-- <artifactId>browsermob-core</artifactId> -->
-      <!-- <version>2.1.5</version> -->
-      <!-- <scope>test</scope> -->
-      <!-- </dependency> -->
-
-      <!-- selenium drivers -->
-      <dependency>
-         <groupId>org.seleniumhq.selenium</groupId>
-         <artifactId>selenium-java</artifactId>
-         <version>${selenium-java-version}</version>
-         <scope>test</scope>
-         <exclusions>
-            <exclusion>
-               <groupId>org.seleniumhq.selenium</groupId>
-               <artifactId>selenium-edge-driver</artifactId>
-            </exclusion>
-            <exclusion>
-               <groupId>org.seleniumhq.selenium</groupId>
-               <artifactId>selenium-ie-driver</artifactId>
-            </exclusion>
-            <exclusion>
-               <groupId>org.seleniumhq.selenium</groupId>
-               <artifactId>selenium-opera-driver</artifactId>
-            </exclusion>
-            <exclusion>
-               <groupId>org.seleniumhq.selenium</groupId>
-               <artifactId>selenium-safari-driver</artifactId>
-            </exclusion>
-            <exclusion>
-               <groupId>org.seleniumhq.selenium</groupId>
-               <artifactId>selenium-chrome-driver</artifactId>
-            </exclusion>
-         </exclusions>
-
-      </dependency>
-
-      <dependency>
-         <groupId>org.seleniumhq.selenium</groupId>
-         <artifactId>selenium-api</artifactId>
-         <version>${selenium-java-version}</version>
-         <scope>test</scope>
-      </dependency>
-
-      <dependency>
-         <groupId>org.seleniumhq.selenium</groupId>
-         <artifactId>selenium-remote-driver</artifactId>
-         <version>${selenium-java-version}</version>
-         <scope>test</scope>
-      </dependency>
-
-      <dependency>
-         <groupId>org.seleniumhq.selenium</groupId>
-         <artifactId>selenium-support</artifactId>
-         <version>${selenium-java-version}</version>
-         <scope>test</scope>
-      </dependency>
-
-
-      <dependency>
-         <groupId>org.seleniumhq.selenium</groupId>
-         <artifactId>selenium-firefox-driver</artifactId>
-         <version>${selenium-java-version}</version>
-         <scope>test</scope>
-      </dependency>
-
-      <dependency>
-         <groupId>com.squareup.okhttp3</groupId>
-         <artifactId>okhttp</artifactId>
-         <version>3.10.0</version>
-         <scope>test</scope>
-      </dependency>
-
-
-      <dependency>
-         <groupId>io.github.bonigarcia</groupId>
-         <artifactId>webdrivermanager</artifactId>
-         <version>${webdrivermanager-version}</version>
-         <scope>test</scope>
-      </dependency>
-
-      <!-- needed for FirfoxDriver -->
-<!--       <dependency> -->
-<!--          <groupId>com.google.guava</groupId> -->
-<!--          <artifactId>guava</artifactId> -->
-<!--          <version>23.0</version> -->
-<!--          <scope>test</scope> -->
-<!--       </dependency> -->
-
-
-
-
-
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -300,6 +206,80 @@
          <scope>test</scope>
       </dependency>
 
+      <!-- selenium driver dependencies -->
+      <!-- NOTE these exclude or override selenium 4.x versions which are pulled in by spring-boot pom -->
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-edge-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-ie-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-opera-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-safari-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-chrome-driver</artifactId>
+            </exclusion>
+         </exclusions>
+
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-api</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-remote-driver</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-support</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-firefox-driver</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>com.squareup.okhttp3</groupId>
+         <artifactId>okhttp</artifactId>
+         <version>3.10.0</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>io.github.bonigarcia</groupId>
+         <artifactId>webdrivermanager</artifactId>
+         <version>${webdrivermanager-version}</version>
+         <scope>test</scope>
+      </dependency>
+
 
    </dependencies>
 
@@ -407,6 +387,35 @@
          <id>integration</id>
          <build>
             <plugins>
+
+               <plugin>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-maven-plugin</artifactId>
+                  <version>10.0.17</version>
+                  <configuration>
+                     <httpConnector>
+                        <port>8080</port>
+                     </httpConnector>
+                     <stopKey>quit</stopKey>
+                     <stopPort>9000</stopPort>
+                  </configuration>
+                  <executions>
+                     <execution>
+                        <id>start-jetty</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                           <goal>start</goal>
+                        </goals>
+                     </execution>
+                     <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                           <goal>stop</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
 
                <plugin>
                   <groupId>org.apache.maven.plugins</groupId>

@@ -17,12 +17,15 @@ import org.openqa.selenium.Dimension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.JavascriptExecutor;
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Set;
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 
-public class MapApplictionIntegration2IT {
-	private  Logger LOG = LoggerFactory.getLogger(MapApplictionIntegration2IT.class);
+public class MapApplictionIT {
+	private  Logger LOG = LoggerFactory.getLogger(MapApplictionIT.class);
 	
 	private WebDriver driver;
 	private Map<String, Object> vars;
@@ -31,15 +34,39 @@ public class MapApplictionIntegration2IT {
 	@Before
 	public void setUp() {
 
-		// get geko driver from https://github.com/mozilla/geckodriver/releases
+		// get gecko driver from https://github.com/mozilla/geckodriver/releases
 		// if you didn't update the Path system variable to add the full directory path
 		// to the executable as above mentioned then doing this directly through code
-		System.setProperty("webdriver.gecko.driver", "C:\\devel\\geckodriver\\geckodriver.exe");
 		
+		String driverLocation = System.getProperty("webdriver.gecko.driver");
+		LOG.debug("initial system property webdriver.gecko.driver "+driverLocation);
+		if(driverLocation==null) {
+			// detect if windows or linux
+			String OS = System.getProperty("os.name").toLowerCase();
+			if(OS.contains("win")) {
+				LOG.debug("using windows driver");
+				driverLocation = "./geckodriver.exe";
+			} else {
+				LOG.debug("using linux driver");
+				driverLocation = "./geckodriver";
+			}
+			
+			File driver = new File(driverLocation);
+			System.setProperty("webdriver.gecko.driver", driver.getAbsolutePath());
+		}
+		LOG.debug("webdriver.gecko.driver set to "+System.getProperty("webdriver.gecko.driver"));
 		
 		FirefoxBinary firefoxBinary = new FirefoxBinary();
-		LOG.debug("setUp() HEADLESS");
-		//firefoxBinary.addCommandLineOptions("--headless");
+		
+		String headless = System.getProperty("selenium.firefox.headless");
+		LOG.debug("initial system property selenium.firefox.headless "+headless);
+		if ("true".equals(headless)) {
+			LOG.debug("system property selenium.firefox.headless="+headless+", running firefox in headless mode");
+			firefoxBinary.addCommandLineOptions("--headless");
+		} else {
+			LOG.debug("system property selenium.firefox.headless="+headless+", running firefox with display");
+		}
+
 		
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		// set up proxy
@@ -48,10 +75,11 @@ public class MapApplictionIntegration2IT {
 		LOG.debug("setUp() FIREFOX BINARY LOG LEVEL TRACE");
 		firefoxOptions.setBinary(firefoxBinary);
 		firefoxOptions.setLogLevel(FirefoxDriverLogLevel.TRACE);
-		LOG.debug("setUp() 4");
+		LOG.debug("setUp() LOADING FIREFOX DRIVER");
 
 		driver = new FirefoxDriver(firefoxOptions);
-		LOG.debug("setUp() 5");
+		
+		LOG.debug("setUp() SETTING DRIVER TIMEOUTS");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 		
 		js = (JavascriptExecutor) driver;

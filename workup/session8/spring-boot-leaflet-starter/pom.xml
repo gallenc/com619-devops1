@@ -398,6 +398,15 @@
                      </httpConnector>
                      <stopKey>quit</stopKey>
                      <stopPort>9000</stopPort>
+
+                     <systemProperties>
+                        <systemProperty>
+                           <!-- injects system property to save upload files in target directory -->
+                           <name>image.file.uploadpath</name>
+                           <value>./target/archive-files</value>
+                        </systemProperty>
+                     </systemProperties>
+
                   </configuration>
                   <executions>
                      <execution>
@@ -443,6 +452,16 @@
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-failsafe-plugin</artifactId>
                   <version>3.2.2</version>
+                  <configuration>
+                     <systemProperties>
+                        <property>
+                           <!-- injects system property to run firefox headless in tests -->
+                           <name>selenium.firefox.headless</name>
+                           <value>true</value>
+                        </property>
+                     </systemProperties>
+                  </configuration>
+
                   <!-- works with *IT.java -->
                   <executions>
                      <execution>

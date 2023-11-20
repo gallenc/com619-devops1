@@ -20,9 +20,9 @@ These measurements can help predict when there is a need to increase the memory 
 
 In the [spring-boot-leaflet-starter](../session8/spring-boot-leaflet-starter) example I have introduced some unit tests which run during the initial build.
 
-[MapApplicationTests.java](/spring-boot-leaflet-starter/src/test/java/org/solent/spring/map/test/MapApplicationTests.java) contains a set of tests which are run by the maven-surefire-plugin  in the [pom.xml](/spring-boot-leaflet-starter/pom.xml).
+[MapApplicationTests.java](../session8/spring-boot-leaflet-starter/src/test/java/org/solent/spring/map/test/MapApplicationTests.java) contains a set of tests which are run by the maven-surefire-plugin  in the [pom.xml](../session8/spring-boot-leaflet-starter/pom.xml).
 The plugin runs test classes named ending in *Test.java. 
-However it is set up to avoid running integration test classes ending in *IT.java.
+However it is set up to avoid running integration test classes ending in `*IT.java`.
 
 ```
          <!-- surefire plugin runs junit tests during test phase but excludes integration tests -->
@@ -38,7 +38,7 @@ However it is set up to avoid running integration test classes ending in *IT.jav
 ```
 The test class spins up the full spring boot application before running a test to check that the home page is reachable and returns some expected text. 
 This is a very simple tests but much more sophisticated tests are possible.
-See the [Spring Testing Guide](see https://spring.io/guides/gs/testing-web/) for more examples. 
+See the [Spring Testing Guide](https://spring.io/guides/gs/testing-web/) for more examples. 
 
 ```
 // see https://spring.io/guides/gs/testing-web/  for examples of testing 

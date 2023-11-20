@@ -78,7 +78,7 @@ Spring can run Selenium as part of unit tests, but in this case I wanted to show
 
 [MapApplictionIT.java](../session8/spring-boot-leaflet-starter/src/test/java/org/solent/spring/map/integration/test/MapApplictionIT.java) is the example test class. 
 
-The [maven-failsafe-plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) in the [pom.xml](/spring-boot-leaflet-starter/pom.xml) only runs tests ending with `*IT.java` during the `integration-test` phase of the build. 
+The [maven-failsafe-plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) in the [pom.xml](../session8/spring-boot-leaflet-starter/pom.xml) only runs tests ending with `*IT.java` during the `integration-test` phase of the build. 
 
 Before the Selenium test can run, the built war is injected into a jetty server and the project starts jetty in the `pre-integration-test` phase and shuts down jetty in the `post-integration-test` phase. 
 

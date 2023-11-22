@@ -1,5 +1,6 @@
 # Session 8 Unit Testing and integration testing
 
+A video supporting this session is at [Video Session 8 COM619](https://youtu.be/hRVuiytu_I4)
 
 ## Introduction
 

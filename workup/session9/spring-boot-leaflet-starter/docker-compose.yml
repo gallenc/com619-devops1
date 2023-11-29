@@ -30,4 +30,6 @@ services:
           - ./target/spring-boot-leaflet-starter-0.0.1-SNAPSHOT.war:/var/lib/jetty/webapps/root.war
           # setting up properties for JMX monitoring
           - ./container-fs/jetty/start.d/jmx-remote.ini:/var/lib/jetty/start.d/jmx-remote.ini
+        #environment:
+          #JAVA_OPTIONS: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.port=11099 -Dcom.sun.management.jmxremote.local.only=false 
 

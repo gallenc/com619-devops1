@@ -1,6 +1,6 @@
 # Session 9  remote monitoring
 
-A basic level of monitoring can be achieved if you expose the nginx statistics and provide hte URL of your application. 
+A basic level of monitoring can be achieved if you expose the nginx statistics and provide your lecturer with the  URL of your application. 
 
 Please add the following lines and provide me with the URL of your application.
 

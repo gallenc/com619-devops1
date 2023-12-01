@@ -19,17 +19,26 @@ services:
         ports: 
          - "8080:8080"
          - "11099:11099"
+         - "11022:22"
         volumes:
           # setting up log data storage (target is used in log4j2.xml)
           - data-jetty-logs:/var/lib/jetty/target:rw
           # setting up data files storage
           - data-jetty-files:/data-jetty-files:rw
+          # setting up
+          # - ./container-fs/jetty/start.d/start.ini:/var/lib/jetty/start.d/start.ini
           # setting up properties for restsimulator app
           - ./container-fs/jetty/start.d/restsimulator.ini:/var/lib/jetty/start.d/restsimulator.ini
           # deploying built restsimulator war file directly into application
           - ./target/spring-boot-leaflet-starter-0.0.1-SNAPSHOT.war:/var/lib/jetty/webapps/root.war
           # setting up properties for JMX monitoring
           - ./container-fs/jetty/start.d/jmx-remote.ini:/var/lib/jetty/start.d/jmx-remote.ini
-        #environment:
-          #JAVA_OPTIONS: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.port=11099 -Dcom.sun.management.jmxremote.local.only=false 
+        #command: [ "java",    "-Dcom.sun.management.jmxremote",    "-Dcom.sun.management.jmxremote.ssl=false",    "-Dcom.sun.management.jmxremote.authenticate=false",     "-Dcom.sun.management.jmxremote.port=1099",    "-jar","$JETTY_HOME/start.jar"]
+        # ,"etc/jetty-jmx.xml","etc/jetty.xml"
+        
+    #    "./wait-for-it.sh", "my-svc-dbserver:3306", "--", "sh", "-c", "java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar /app.jar"]
+    #    environment:
+     #     JAVA_OPTIONS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.port=11099 -Dcom.sun.management.jmxremote.local.only=false"
+          
+          
 

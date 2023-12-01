@@ -7,6 +7,10 @@ FROM jetty:10.0.17-jdk11
 USER root
 RUN apt-get update && apt-get install -y unzip
 
+## install ssh and network tools
+RUN apt-get update && apt-get install -y openssh-server  iputils-ping
+RUN update-rc.d ssh defaults
+
 # make shared directories and change ownership to jetty
 RUN mkdir /data-jetty-files
 RUN chown -R jetty:jetty /data-jetty-files

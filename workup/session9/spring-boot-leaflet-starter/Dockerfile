@@ -18,6 +18,12 @@ RUN chown -R jetty:jetty /data-jetty-files
 RUN mkdir /var/lib/jetty/target
 RUN chown -R jetty:jetty /var/lib/jetty/target
 
+# Optional - Install nagios jmx plugin - used for testing jmx locally
+ADD http://snippets.syabru.ch/nagios-jmx-plugin/download/nagios-jmx-plugin.zip /nagios-jmx-plugin.zip
+RUN unzip /nagios-jmx-plugin.zip -d /nagios-jmx-plugin-tmp
+RUN mv /nagios-jmx-plugin-tmp/nagios-jmx-plugin-1.2.3 /nagios-jmx-plugin
+RUN rm -R /nagios-jmx-plugin-tmp && rm /nagios-jmx-plugin.zip
+
 USER jetty
 
 ## downloads and unpacks cargo jetty deployer in web apps directory

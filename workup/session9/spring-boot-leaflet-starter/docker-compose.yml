@@ -2,6 +2,17 @@
 # example build deployer as part of docker compose https://github.com/zhao-lin-li/docker-compose-build/tree/master
 version: "3.2"
 
+# using fixed ip addresses so opennms provisoning config works
+# to see all network use docker network ls
+# to see config use docker network inspect spring-boot-leaflet-starter_jettynw
+# note gateway is 172.20.1.1 
+networks:
+  jettynw:
+    ipam:
+      config:
+        - subnet: 172.20.1.0/24
+
+
 volumes:
   data-jetty-files: {}
   data-jetty-logs: {}
@@ -40,6 +51,50 @@ services:
     #    "./wait-for-it.sh", "my-svc-dbserver:3306", "--", "sh", "-c", "java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar /app.jar"]
     #    environment:
      #     JAVA_OPTIONS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.port=11099 -Dcom.sun.management.jmxremote.local.only=false"
-          
-          
+        networks:
+           jettynw:
+             ipv4_address: 172.20.1.50
+        
+    jmx-client :
+        container_name: jmx-client
+        hostname: jmx-client
+        build: ./eclipse-temurin
+        networks:
+           jettynw:
+             ipv4_address: 172.20.1.51
+        
+    minion-app1:
+        image: ${DOCKER_REGISTRY:-docker.io}/${DOCKER_ORG:-opennms}/${MINION_OCI:-minion}:${ONMS_VERSION:-bleeding}
+        container_name: minion-app1
+        hostname: minion-app1
+        sysctls:
+          net.ipv4.ping_group_range: "0 429496729"
+        environment:
+          TZ: ${TIMEZONE:-America/New_York}
+          JAVA_MIN_MEM: 512M
+          JAVA_MAX_MEM: 2048M
+        volumes:
+          - './container-fs/minion-app1/opt/minion/minion-config.yaml:/opt/minion/minion-config.yaml'
+        command: ["-f"]
+        healthcheck:
+          test: "/health.sh"
+          interval: 30s
+          timeout: 20s
+          retries: 3
+        ports:
+          - "18201:8201/tcp"
+          - "11162:1162/udp"
+          - "11514:1514/udp"
+        deploy:
+          resources:
+            limits:
+              cpus: "0.5"
+              memory: 2560M
+        networks:
+          jettynw:
+             ipv4_address: 172.20.1.25
+        # see https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach
+        extra_hosts:
+          - "host.docker.internal:host-gateway"
+
 

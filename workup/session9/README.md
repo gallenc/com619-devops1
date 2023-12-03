@@ -22,5 +22,8 @@ java -jar /nagios-jmx-plugin/check_jmx.jar -U service:jmx:rmi://localhost:11099/
 
 JMX OK - HeapMemoryUsage.used = 213935616 | 'HeapMemoryUsage used'=213935616;;;;
 
+```
 
+```
+java -jar /nagios-jmx-plugin/check_jmx.jar -U service:jmx:rmi://restsimulator:11099/jndi/rmi://restsimulator:11099/jmxrmi --username myuser --password mypass -O java.lang:type=Memory -A HeapMemoryUsage -K used
 ```

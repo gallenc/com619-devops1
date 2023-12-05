@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y unzip iputils-ping
 
 # installing opennms jmx config generator - this installs too many depencencies
 # 
-RUN gnupg software-properties-common
+RUN apt-get install -y gnupg software-properties-common
 RUN apt-key adv --fetch-keys https://debian.opennms.org/OPENNMS-GPG-KEY
 RUN add-apt-repository -s 'deb https://debian.opennms.org stable main'
 RUN apt-get install -y opennms-jmx-config-generator

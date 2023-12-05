@@ -294,6 +294,8 @@
                   <!-- resolves to file:/C:/devel/gitrepos/com619-devops1/workup/session6/userManagementExample-web/./target/user-photos/ -->
                   <image.file.uploadpath>./target/archive-files</image.file.uploadpath>
                </environmentVariables>
+               <jmxPort>9001</jmxPort>
+               <jvmArguments>-Dspring.application.admin.enabled=true</jvmArguments>
             </configuration>
          </plugin>
 

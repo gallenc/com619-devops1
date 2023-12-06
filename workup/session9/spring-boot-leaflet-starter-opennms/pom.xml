@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>net.map</groupId>
+   <artifactId>spring-boot-leaflet-starter</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+   <packaging>war</packaging>
+
+   <name>spring-boot-leaflet-starter</name>
+   <description>Demo project for Spring Boot</description>
+
+   <parent>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>2.7.16</version>
+      <relativePath /> <!-- lookup parent from repository -->
+   </parent>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <maven.compiler.source>11</maven.compiler.source>
+      <maven.compiler.target>11</maven.compiler.target>
+
+      <springdoc.version>1.7.0</springdoc.version>
+
+      <junit.version>4.12</junit.version>
+      <hamcrest-core.version>1.3</hamcrest-core.version>
+
+      <!-- needed by Hibernate for java 11 -->
+      <javassist.version>3.27.0-GA</javassist.version>
+      <cglib-nodep.version>3.2.12</cglib-nodep.version>
+
+      <!-- cargo -->
+      <cargo.plugin.version>1.10.9</cargo.plugin.version>
+
+      <!-- use properties file or uncomment here. Note override setting doesn't work in properties-maven-plugin -->
+      <!-- <remote.cargo.hostname>127.0.0.1</remote.cargo.hostname> -->
+      <!-- <remote.cargo.servlet.port>8080</remote.cargo.servlet.port> -->
+      <!-- <remote.cargo.protocol>http</remote.cargo.protocol> -->
+      <!-- <remote.cargo.remote.username>someusername</remote.cargo.remote.username> -->
+      <!-- <remote.cargo.remote.password>somepassword</remote.cargo.remote.password> -->
+
+      <selenium-java-version>3.14.0</selenium-java-version>
+      <!-- <selenium-java-version>4.1.4</selenium-java-version> -->
+      <webdrivermanager-version>4.2.2</webdrivermanager-version>
+
+   </properties>
+
+   <dependencies>
+
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-jpa</artifactId>
+         <exclusions>
+            <exclusion>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+      <!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> </dependency> -->
+
+
+      <!-- <dependency> -->
+      <!-- <groupId>org.springframework.boot</groupId> -->
+      <!-- <artifactId>spring-boot-starter-thymeleaf</artifactId> -->
+      <!-- <exclusions> -->
+      <!-- <exclusion> -->
+      <!-- <groupId>org.springframework.boot</groupId> -->
+      <!-- <artifactId>spring-boot-starter-logging</artifactId> -->
+      <!-- </exclusion> -->
+      <!-- </exclusions> -->
+      <!-- </dependency> -->
+
+
+      <!-- spring boot dependencies -->
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-web</artifactId>
+         <exclusions>
+            <exclusion>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+
+      <!-- Add Log4j2 Dependency -->
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-log4j2</artifactId>
+      </dependency>
+
+      <!-- tomcat jsp dependencies -->
+      <dependency>
+         <groupId>org.apache.tomcat.embed</groupId>
+         <artifactId>tomcat-embed-jasper</artifactId>
+         <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-tomcat</artifactId>
+         <scope>provided</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+
+      <!-- swagger open api dependencies -->
+
+      <dependency>
+         <groupId>org.springdoc</groupId>
+         <artifactId>springdoc-openapi-ui</artifactId>
+         <version>${springdoc.version}</version>
+      </dependency>
+
+      <dependency>
+         <groupId>javax.servlet</groupId>
+         <artifactId>jstl</artifactId>
+         <scope>provided</scope>
+      </dependency>
+
+      <!-- <dependency> -->
+      <!-- <groupId>mysql</groupId> -->
+      <!-- <artifactId>mysql-connector-java</artifactId> -->
+      <!-- <scope>runtime</scope> -->
+      <!-- </dependency> -->
+
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+         <scope>test</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-java</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+
+      <!-- IN MEMORY Database and JDBC Driver -->
+      <dependency>
+         <groupId>org.hsqldb</groupId>
+         <artifactId>hsqldb</artifactId>
+      </dependency>
+
+      <!-- dependencies for java 11 -->
+      <dependency>
+         <groupId>javax.annotation</groupId>
+         <artifactId>javax.annotation-api</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>javax.xml.bind</groupId>
+         <artifactId>jaxb-api</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.glassfish.jaxb</groupId>
+         <artifactId>jaxb-runtime</artifactId>
+      </dependency>
+      <!-- needed by Hibernate for java 11 -->
+      <dependency>
+         <groupId>org.javassist</groupId>
+         <artifactId>javassist</artifactId>
+         <version>${javassist.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>cglib</groupId>
+         <artifactId>cglib-nodep</artifactId>
+         <version>${cglib-nodep.version}</version>
+      </dependency>
+
+      <!-- junit dependencies -->
+      <!-- <dependency> -->
+      <!-- <groupId>junit</groupId> -->
+      <!-- <artifactId>junit</artifactId> -->
+      <!-- <scope>test</scope> -->
+      <!-- </dependency> -->
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>${junit.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.hamcrest</groupId>
+         <artifactId>hamcrest-core</artifactId>
+         <version>${hamcrest-core.version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <!-- This is necessary if you're using JUnit 4 with the latest Spring Boot version -->
+      <dependency>
+         <groupId>org.junit.vintage</groupId>
+         <artifactId>junit-vintage-engine</artifactId>
+         <scope>test</scope>
+      </dependency>
+
+      <!-- selenium driver dependencies -->
+      <!-- NOTE these exclude or override selenium 4.x versions which are pulled in by spring-boot pom -->
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+         <exclusions>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-edge-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-ie-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-opera-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-safari-driver</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.seleniumhq.selenium</groupId>
+               <artifactId>selenium-chrome-driver</artifactId>
+            </exclusion>
+         </exclusions>
+
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-api</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-remote-driver</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-support</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-firefox-driver</artifactId>
+         <version>${selenium-java-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>com.squareup.okhttp3</groupId>
+         <artifactId>okhttp</artifactId>
+         <version>3.10.0</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>io.github.bonigarcia</groupId>
+         <artifactId>webdrivermanager</artifactId>
+         <version>${webdrivermanager-version}</version>
+         <scope>test</scope>
+      </dependency>
+
+
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+               <environmentVariables>
+                  <!-- this is only used for spring-boot:run instead of application.properties image.file.uploadpath=./target/archive-files -->
+                  <!-- resolves to file:/C:/devel/gitrepos/com619-devops1/workup/session6/userManagementExample-web/./target/user-photos/ -->
+                  <image.file.uploadpath>./target/archive-files</image.file.uploadpath>
+               </environmentVariables>
+            </configuration>
+         </plugin>
+
+         <!-- surefire plugin runs junit tests during test phase but excludes integration tests -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+               <excludes>
+                  <exclude>**/*IT.java</exclude>
+               </excludes>
+            </configuration>
+         </plugin>
+
+
+
+         <!-- see https://www.mojohaus.org/properties-maven-plugin/ -->
+         <!-- note useDefaultValues default values doesn't work as expected so not used -->
+         <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>properties-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <executions>
+               <execution>
+                  <phase>initialize</phase>
+                  <goals>
+                     <goal>read-project-properties</goal>
+                  </goals>
+                  <configuration>
+                     <quiet>false</quiet>
+                     <files>
+                        <!-- copy and modify deploy.properties.template to deploy.properties -->
+                        <file>./deploy.properties</file>
+                     </files>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+
+
+         <!-- to read properties file you must use mvn initialize cargo:deploy -->
+         <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven3-plugin</artifactId>
+            <version>${cargo.plugin.version}</version>
+            <configuration>
+               <container>
+                  <containerId>jetty10x</containerId>
+                  <type>remote</type>
+               </container>
+
+               <configuration>
+                  <type>runtime</type>
+                  <properties>
+                     <!-- properties loaded from external properties file or uncomment properties above -->
+                     <cargo.hostname>${remote.cargo.hostname}</cargo.hostname>
+                     <cargo.servlet.port>${remote.cargo.servlet.port}</cargo.servlet.port>
+                     <cargo.protocol>${remote.cargo.protocol}</cargo.protocol>
+                     <cargo.remote.username>${remote.cargo.remote.username}</cargo.remote.username>
+                     <cargo.remote.password>${remote.cargo.remote.password}</cargo.remote.password>
+                  </properties>
+               </configuration>
+
+               <deployer>
+                  <type>remote</type>
+               </deployer>
+
+               <deployables>
+                  <deployable>
+                     <groupId>${project.groupId}</groupId>
+                     <artifactId>${project.artifactId}</artifactId>
+                     <type>war</type>
+                     <properties>
+                        <context>/</context>
+                     </properties>
+                  </deployable>
+               </deployables>
+            </configuration>
+         </plugin>
+
+
+      </plugins>
+
+
+
+   </build>
+
+   <!-- integration testing profile -->
+   <profiles>
+      <profile>
+         <id>integration</id>
+         <build>
+            <plugins>
+
+               <plugin>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-maven-plugin</artifactId>
+                  <version>10.0.17</version>
+                  <configuration>
+                     <httpConnector>
+                        <port>8080</port>
+                     </httpConnector>
+                     <stopKey>quit</stopKey>
+                     <stopPort>9000</stopPort>
+
+                     <systemProperties>
+                        <systemProperty>
+                           <!-- injects system property to save upload files in target directory -->
+                           <name>image.file.uploadpath</name>
+                           <value>./target/archive-files</value>
+                        </systemProperty>
+                     </systemProperties>
+
+                  </configuration>
+                  <executions>
+                     <execution>
+                        <id>start-jetty</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                           <goal>start</goal>
+                        </goals>
+                     </execution>
+                     <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                           <goal>stop</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
+
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-antrun-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>download-files</id>
+                        <phase>initialize</phase>
+                        <goals>
+                           <goal>run</goal>
+                        </goals>
+                        <configuration>
+                           <target name="downloadfiles">
+                              <ant antfile="build.xml">
+                                 <target name="download-drivers" />
+                              </ant>
+                           </target>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+
+
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-failsafe-plugin</artifactId>
+                  <version>3.2.2</version>
+                  <configuration>
+                     <systemProperties>
+                        <property>
+                           <!-- injects system property to run firefox headless in tests -->
+                           <name>selenium.firefox.headless</name>
+                           <value>true</value>
+                        </property>
+                     </systemProperties>
+                  </configuration>
+
+                  <!-- works with *IT.java -->
+                  <executions>
+                     <execution>
+                        <goals>
+                           <goal>integration-test</goal>
+                           <goal>verify</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+   </profiles>
+
+
+</project>

@@ -4,6 +4,9 @@
 
 [COM619-DevOps.pdf](../Assessment/COM619-DevOps.pdf)
 
+Zoom meeting for shared presentations 853 2022 3317 
+https://us02web.zoom.us/j/85320223317
+
 ## Assessment AE1 - Presentation and code
 
 [AssessmentCOM619-AE1-2023-24;1.pdf](../Assessment/AssessmentCOM619-AE1-2023-24;1.pdf)

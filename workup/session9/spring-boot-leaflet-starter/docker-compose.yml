@@ -58,7 +58,7 @@ services:
     jmx-client :
         container_name: jmx-client
         hostname: jmx-client
-        build: ./eclipse-temurin
+        build: ./jmx-client
         networks:
            jettynw:
              ipv4_address: 172.20.1.51

@@ -28,6 +28,8 @@ Please see [Team Details](../Assessment/Teams.md) for details of the team you be
 If you are not yet on the list please form a team of 4 and notify Craig Gallen of the details.
 
 ## sprint dates
+Zoom meeting for shared presentations 853 2022 3317 
+https://us02web.zoom.us/j/85320223317
 
 | dates | Description | session |
 |-----|----|----|

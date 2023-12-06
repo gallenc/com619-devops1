@@ -1,0 +1,22 @@
+<project name="DownloadFiles" basedir=".">
+	<!-- ant build file to download geckodrivers if dont exist -->
+	<!-- test if file exists -->
+	<target name="check-driver">
+		<echo message="checking if drivers downloaded" />
+		<condition property="driver.not.present">
+			<not>
+				<available file="geckodriver.exe" />
+			</not>
+		</condition>
+	</target>
+	<target name="download-drivers" depends="check-driver" if="driver.not.present">
+		<!-- download windows geckodriver -->
+		<echo message="no drivers present, downloading drivers" />
+		<get src="https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-win64.zip" dest="target/geckodriverwin.zip" verbose="false" usetimestamp="true" />
+		<unzip src="target/geckodriverwin.zip" dest="." />
+		<!-- download linux64 geckodriver -->
+		<get src="https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz" dest="target/geckodriverlinux.tar.gz" verbose="false" usetimestamp="true" />
+		<untar src="target/geckodriverlinux.tar.gz" dest="." compression="gzip" />
+	</target>
+</project>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<jmx-datacollection-config rrdRepository="/opt/opennms/share/rrd/snmp/">
+   <jmx-collection name="jmx-jetty">
+      <rrd step="300">
+         <rra>RRA:AVERAGE:0.5:1:2016</rra>
+         <rra>RRA:AVERAGE:0.5:12:1488</rra>
+         <rra>RRA:AVERAGE:0.5:288:366</rra>
+         <rra>RRA:MAX:0.5:288:366</rra>
+         <rra>RRA:MIN:0.5:288:366</rra>
+      </rrd>
+      <mbeans>
+
+         <!-- jvm satistics -->
+         <mbean name="JVM Memory" objectname="java.lang:type=OperatingSystem">
+            <attrib name="FreePhysicalMemorySize" alias="FreeMemory" type="gauge" />
+            <attrib name="TotalPhysicalMemorySize" alias="TotalMemory" type="gauge" />
+            <attrib name="FreeSwapSpaceSize" alias="FreeSwapSpace" type="gauge" />
+            <attrib name="TotalSwapSpaceSize" alias="TotalSwapSpace" type="gauge" />
+         </mbean>
+         <mbean name="JVM Threading" objectname="java.lang:type=Threading">
+            <attrib name="ThreadCount" alias="ThreadCount" type="gauge" />
+            <attrib name="PeakThreadCount" alias="PeakThreadCount" type="gauge" />
+            <attrib name="DaemonThreadCount" alias="DaemonThreadCount" type="gauge" />
+            <attrib name="CurrentThreadCpuTime" alias="CurThreadCpuTime" type="gauge" />
+         </mbean>
+         <mbean name="JVM GarbageCollector:MarkSweepCompact" objectname="java.lang:type=GarbageCollector,name=MarkSweepCompact">
+            <attrib name="CollectionCount" alias="MSCCollCnt" type="counter" />
+            <attrib name="CollectionTime" alias="MSCCollTime" type="counter" />
+            <comp-attrib name="LastGcInfo" type="Composite" alias="MSCLastGcInfo">
+               <comp-member name="GcThreadCount" type="gauge" alias="MSCGcThreadCnt" />
+               <comp-member name="duration" type="gauge" alias="MSCDuration" />
+               <comp-member name="endTime" type="gauge" alias="MSCEndTime" />
+            </comp-attrib>
+         </mbean>
+
+<!--          <mbean name="OpenNMS.JettyServer" objectname="OpenNMS:Name=JettyServer"> -->
+<!--             <attrib name="HttpsConnectionsTotal" alias="HttpsConnTotal" type="counter" /> -->
+<!--             <attrib name="HttpsConnectionsOpen" alias="HttpsConnOpen" type="gauge" /> -->
+<!--             <attrib name="HttpsConnectionsOpenMax" alias="HttpsConnOpenMax" type="gauge" /> -->
+<!--             <attrib name="HttpConnectionsTotal" alias="HttpConnTotal" type="counter" /> -->
+<!--             <attrib name="HttpConnectionsOpen" alias="HttpConnOpen" type="gauge" /> -->
+<!--             <attrib name="HttpConnectionsOpenMax" alias="HttpConnOpenMax" type="gauge" /> -->
+<!--          </mbean> -->
+
+      </mbeans>
+
+   </jmx-collection>
+</jmx-datacollection-config>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<http-datacollection-config xmlns:http-dc="http://xmlns.opennms.org/xsd/config/http-datacollection"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://xmlns.opennms.org/xsd/config/http-datacollection http://www.opennms.org/xsd/config/http-datacollection-config.xsd"
+   rrdRepository="/opt/opennms/share/rrd/snmp/">
+
+  <!--
+  <http-collection name="doc-count">
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+    <uris>
+      <uri name="document-counts">
+        <url path="/test/resources/httpcolltest.html"
+             user-agent="Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/412 (KHTML, like Gecko) Safari/412"
+             matches=".*([0-9]+).*" response-range="100-399" >
+        </url>
+        <attributes>
+          <attrib alias="documentCount" match-group="1" type="counter32"/>
+        </attributes>
+      </uri>
+    </uris>
+  </http-collection>
+  -->
+
+   
+ <http-collection name="Apache-Stats">
+   <rrd step="300">
+     <rra>RRA:AVERAGE:0.5:1:8928</rra>
+     <rra>RRA:AVERAGE:0.5:12:8784</rra>
+     <rra>RRA:MIN:0.5:12:8784</rra>
+     <rra>RRA:MAX:0.5:12:8784</rra>
+   </rrd>
+   <uris>
+
+     <uri name="apache">
+       <url path="/server-status/" query="auto"
+            user-agent="Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/412 (KHTML, like Gecko) Safari/412"
+            matches="(?s).*?Total\sAccesses:\s([0-9]+).*?Total\skBytes:\s([0-9]+).*?CPULoad:\s([0-9\.]+).*?Uptime:\s([0-9]+).*?ReqPerSec:\s([0-9\.]+).*?BytesPerSec:\s([0-9\.]+).*?BytesPerReq:\s([0-9\.]+).*?BusyWorkers:\s([0-9]+).*?IdleWorkers:\s([0-9]+).*" 
+            response-range="100-399"  >
+       </url>
+       <attributes>
+         <attrib alias="TotalAccesses" match-group="1" type="counter32"/>
+         <attrib alias="TotalkBytes" match-group="2" type="counter32"/>
+         <attrib alias="CPULoad" match-group="3" type="gauge32"/>
+         <attrib alias="Uptime" match-group="4" type="gauge32"/>
+         <attrib alias="ReqPerSec" match-group="5" type="gauge32"/>
+         <attrib alias="BytesPerSec" match-group="6" type="gauge32"/>
+         <attrib alias="BytesPerReq" match-group="7" type="gauge32"/>
+         <attrib alias="BusyWorkers" match-group="8" type="gauge32"/>
+         <attrib alias="IdleWorkers" match-group="9" type="gauge32"/>
+       </attributes>
+     </uri>
+   </uris>
+  </http-collection>
+
+    <!-- https://localhost/nginx_status -->
+    <!-- Active connections: 2  -->
+    <!-- server accepts handled requests -->
+    <!--  6 6 54  -->
+    <!-- Reading: 0 Writing: 1 Waiting: 1  -->
+   <http-collection name="nginx_stats">
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:8928</rra>
+      <rra>RRA:AVERAGE:0.5:12:8784</rra>
+      <rra>RRA:MIN:0.5:12:8784</rra>
+      <rra>RRA:MAX:0.5:12:8784</rra>
+    </rrd>
+    <uris>
+         <!-- note escaped matches="(?s)Active connections:\s([0-9]+)\nserver accepts handled requests\n\s([0-9]+)\s([0-9]+)\s([0-9]+)\nReading:\s([0-9]+)\sWriting:\s([0-9]+)\sWaiting:\s([0-9]+)" -->
+         <!-- matches="(?s)Active connections:\\s([0-9]+)\\nserver accepts handled requests\\n\\s([0-9]+)\\s([0-9]+)\\s([0-9]+)\\nReading:\\s([0-9]+)\\sWriting:\\s([0-9]+)\\sWaiting:\\s([0-9]+)"
+          -->
+         <uri name="nginx_stats">
+            <url path="/nginx_status/"
+                 user-agent="Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/412 (KHTML, like Gecko) Safari/412"
+                 matches="(?s)Active connections:\s*?([0-9]+)\s*?\nserver accepts handled requests\s*?\n\s*?([0-9]+)\s*?([0-9]+)\s*?([0-9]+)\s*?\n\s*?Reading:\s*?([0-9]+)\s*?Writing:\s*?([0-9]+)\s*?Waiting:\s*?([0-9]+).*"
+                 response-range="100-300"
+            >
+            </url>
+               <attributes>
+                  <attrib alias="nginxActive" match-group="1" type="gauge32" />
+                  <attrib alias="nginxAccepts" match-group="2" type="counter32" />
+                  <attrib alias="nginxHandled" match-group="3" type="counter32" />
+                  <attrib alias="nginxRequests" match-group="4" type="counter32" />
+                  <attrib alias="nginxReading" match-group="5" type="gauge32" />
+                  <attrib alias="nginxWriting" match-group="6" type="gauge32" />
+                  <attrib alias="nginxWaiting" match-group="7" type="gauge32" />
+               </attributes>
+         </uri>
+      </uris>
+   </http-collection>
+
+</http-datacollection-config>

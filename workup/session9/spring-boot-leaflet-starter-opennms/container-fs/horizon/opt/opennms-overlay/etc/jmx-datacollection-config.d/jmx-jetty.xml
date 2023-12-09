@@ -42,6 +42,28 @@
 <!--             <attrib name="HttpConnectionsOpenMax" alias="HttpConnOpenMax" type="gauge" /> -->
 <!--          </mbean> -->
 
+         <!-- jetty mbeans -->
+         <mbean name="org.eclipse.jetty.server.session.defaultsessioncache" objectname="org.eclipse.jetty.server.session:context=ROOT,type=defaultsessioncache,id=0">
+            <attrib name="sessionsCurrent" alias="0sessionsCurrent" type="gauge"/>
+            <attrib name="sessionsMax" alias="0sessionsMax" type="gauge"/>
+            <attrib name="sessionsTotal" alias="0sessionsTotal" type="gauge"/>
+            <attrib name="state" alias="28state" type="gauge"/>
+         </mbean>
+         <mbean name="org.eclipse.jetty.server.session.defaultsessioncache" objectname="org.eclipse.jetty.server.session:context=cargo-jetty-deployer,type=defaultsessioncache,id=0">
+            <attrib name="sessionsCurrent" alias="1sessionsCurrent" type="gauge"/>
+            <attrib name="sessionsMax" alias="1sessionsMax" type="gauge"/>
+            <attrib name="sessionsTotal" alias="1sessionsTotal" type="gauge"/>
+            <attrib name="state" alias="29state" type="gauge"/>
+         </mbean>
+         <mbean name="org.eclipse.jetty.websocket.javax.common.sessiontracker" objectname="org.eclipse.jetty.websocket.javax.common:context=ROOT,type=sessiontracker,id=0">
+            <attrib name="numSessions" alias="2numSessions" type="gauge"/>
+            <attrib name="state" alias="78state" type="gauge"/>
+         </mbean>
+         <mbean name="org.eclipse.jetty.websocket.javax.common.sessiontracker" objectname="org.eclipse.jetty.websocket.javax.common:context=cargo-deployer,type=sessiontracker,id=0">
+            <attrib name="numSessions" alias="3numSessions" type="gauge"/>
+            <attrib name="state" alias="79state" type="gauge"/>
+         </mbean>
+
       </mbeans>
 
    </jmx-collection>

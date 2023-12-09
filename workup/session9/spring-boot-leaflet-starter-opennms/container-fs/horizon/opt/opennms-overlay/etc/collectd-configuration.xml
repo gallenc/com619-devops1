@@ -236,8 +236,8 @@
          <parameter key="ds-name" value="jmx-jetty" />
          <parameter key="friendly-name" value="jmx-jetty" />
          <!-- username password not used in example -->
-         <parameter key="username" value="${requisition:jetty-jmx-user|jetty-jmx-user}" />
-         <parameter key="password" value="${requisition:jetty-jmx-pass|jetty-jmx-pass}" />
+<!--          <parameter key="username" value="${requisition:jetty-jmx-user|jetty-jmx-user}" /> -->
+<!--          <parameter key="password" value="${requisition:jetty-jmx-pass|jetty-jmx-pass}" /> -->
       </service>
    </package>
 

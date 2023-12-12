@@ -1,0 +1,26 @@
+<model-import xmlns="http://xmlns.opennms.org/xsd/config/model-import" date-stamp="2023-12-12T14:09:57.852-05:00" foreign-source="test" last-import="2023-12-12T14:10:21.520-05:00">
+   <node foreign-id="1702407379556" node-label="restsimulator">
+      <interface descr="jetty" ip-addr="172.20.1.50" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="HTTP-8080"/>
+         <monitored-service service-name="JMX-Jetty"/>
+      </interface>
+   </node>
+   <node foreign-id="1702407379555" node-label="host.docker.internal">
+      <interface ip-addr="192.168.65.254" status="1" snmp-primary="P"/>
+   </node>
+   <node foreign-id="1702407195748" node-label="nginx">
+      <interface descr="nginx" ip-addr="172.20.1.5" status="1" snmp-primary="P">
+         <monitored-service service-name="HTTP"/>
+         <monitored-service service-name="HTTPS"/>
+         <monitored-service service-name="nginx_stats"/>
+      </interface>
+   </node>
+   <node foreign-id="1702407333413" node-label="database">
+      <interface ip-addr="172.20.1.10" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="PostgreSQL"/>
+         <monitored-service service-name="Postgres"/>
+      </interface>
+   </node>
+</model-import>

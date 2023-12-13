@@ -56,7 +56,7 @@
 |         |             |              |             |                |             |             |
 |          |             |              |             |                |             |             |
 | Wednesday class         |             |              |             |                |             |             |
-| kryptonite  | Abraham James |   5JAMEA07 | 5jamea07@solent.ac.uk              |https://github.com/ArconOffl/COM619-Assignment1   |  https://github.com/users/ArconOffl/projects/2    |   http://ntworlock.uksouth.cloudapp.azure.com:8080/          |            
+| kryptonite  | Abraham James |   5JAMEA07 | 5jamea07@solent.ac.uk              |https://github.com/ArconOffl/COM619-Assignment1   |  https://github.com/users/ArconOffl/projects/2    |   https://kryptonite.uksouth.cloudapp.azure.com          |            
 |             | Nathan Worlock  | AcornOffl |             |                |             |             |
 |             | Jenny Wilson | 5wilsn94     |             |                |             |             |
 |             | Klara Hoffmannova | hoffinn     | 5hoffk77@solent.ac.uk            |                |             |             |

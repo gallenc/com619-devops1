@@ -28,11 +28,11 @@
 |             | Muhammad Sajid | AhubSajid       | 5shaim26@solent.ac.uk     |                |             |             |
 |             | Josh Clarke | JoshC98         | 5clarj31@solent.ac.uk            |                |             |             |
 |          |             |              |             |                |             |             |
-| Mongoose | Theodoros Christou  |   |        |  https://github.com/GoodH21/DevOps-Group  (not public) <br> https://github.com/GoodH21/com619-devops1                 | http://com619-mongeese.uksouth.cloudapp.azure.com:3000            |             |
-|          |Arooj Fatima |              |             |                |             |             |
-|          |Harriet Goodyear | GoodH21             |             |                |             |             |
-|          |Maye Hunt |              |             |                |             |             |             |
-|          |Georgios Kleitou |              |             |                |             |             |
+| Mongoose | Theodoros Christou  |TheodorosChristou|5chrit06@solent.ac.uk|[https://github.com/GoodH21/com619-devops1](https://github.com/TheodorosChristou/DevOps-Group)| [http://com619-mongeese.uksouth.cloudapp.azure.com:3000](https://com619mongeese.uksouth.cloudapp.azure.com/)            |             |
+|          |Arooj Fatima |Arooj|5fatia92@solent.ac.uk            |                |             |             |
+|          |Harriet Goodyear | GoodH21|5goodh71@solent.ac.uk             |                |             |             |
+|          |Maye Hunt |MayeHunt|1huntg03@solent.ac.uk             |                |             |             |             |
+|          |Georgios Kleitou |GeorgiosKleitou|5kleig36@solent.ac.uk             |                |             |             |
 |          |             |              |             |                |             |             |
 | Git Guardians |Jakub Sepiolo |              | 5sepij35@solent.ac.uk <BR> jakubsepiolo2001 |  https://github.com/jakubsepiolo2001/COM619-AE1/           |  https://github.com/users/jakubsepiolo2001/projects/1              |             |           
 |          |  Tyler Short |  Tyler-Short1 |  5short82@solent.ac.uk            |                |             |             |

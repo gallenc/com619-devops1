@@ -16,11 +16,11 @@
 |             | Thomas Strong   | TomStrong             |  5strot78@solent.ac.uk           |                |             |             |
 |             | Joao Maria Fragoso Potes   | Joao-Potes           | 4fragj68@solent.ac.uk            |                |             |             |
 |             |             |              |             |                |             |
-| Drop table * |  Harry Maynard | 4maynh59             |               | https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |  
+| Drop table * |  Harry Maynard | 4maynh59             | 4maynh59@solent.ac.uk             | https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |  
 |             |  Senju Murase   | jrykns  |  2muras86@solent.ac.uk    |                |             |             |
-|             |  Dario Cruz  | dariocruz96   |             |                |             |             |
-|             |  Igor Kanchukovskyi       | IgorGrey  |             |                |             |             |
-|             | Hamza Mohibe |  HamzaMohibe  |             |                |             |             |
+|             |  Dario Cruz  | dariocruz96   | 5rouds70@solent.ac.uk            |                |             |             |
+|             |  Igor Kanchukovskyi       | IgorGrey  |  5kancia5@solent.ac.uk           |                |             |             |
+|             | Hamza Mohibe |  HamzaMohibe  | 5mohih98@solent.ac.uk            |                |             |             |
 |             |             |              |             |                |             |             |
 | Node Ninjas       | Gaetano Archer | GDoesCode     | 5archg31@solent.ac.uk             | https://github.com/GDoesCode/COM619DevOpsGroupWork   | https://github.com/users/GDoesCode/projects/1    |  https://opennms1uksouthcloudazureapp.brazilsouth.cloudapp.azure.com:8080                 |
 |             | Jacob Shattock | jacob-shattock-solent  | 5shatj38@solent.ac.uk             |                |             |             |

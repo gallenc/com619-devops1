@@ -18,7 +18,7 @@
 |             |             |              |             |                |             |
 | Drop table * |  Harry Maynard | 4maynh59             | 4maynh59@solent.ac.uk             | https://github.com/jrykns/not-a-virus-map <BR><BR>  https://github.com/jrykns/not-a-virus-map/wiki | https://github.com/users/jrykns/projects/1       |   https://com619-devops.uksouth.cloudapp.azure.com           |  
 |             |  Senju Murase   | jrykns  |  2muras86@solent.ac.uk    |                |             |             |
-|             |  Dario Cruz  | dariocruz96   | 5rouds70@solent.ac.uk            |                |             |             |
+|             |  Dario Cruz  | dariocruz96   | 5rousd70@solent.ac.uk            |                |             |             |
 |             |  Igor Kanchukovskyi       | IgorGrey  |  5kancia5@solent.ac.uk           |                |             |             |
 |             | Hamza Mohibe |  HamzaMohibe  | 5mohih98@solent.ac.uk            |                |             |             |
 |             |             |              |             |                |             |             |

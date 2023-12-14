@@ -48,3 +48,22 @@ https://us02web.zoom.us/j/85320223317
 |15 DEC | handin presentation |
 |12 JAN | personal report |
 
+# SUBMISSION INSTRUCTIONS AE1 Group Project
+
+I need to you to submit a snapshot of your project on SOL before the submission deadline. This will be used by the examiner to audit your work.
+If you do not submit on time on SOL, your work cannot be assessed as delivered on time.
+
+HOWEVER, I will be marking your group project as it exists online on github.
+I also need you to post your video on Youtube and link to it from the README page of your repository. 
+
+Please do the following when handing in the AE1 group project
+
+1. ALL members of your team should submit the following on SOL in your individual submission link
+2. Submit your group video on SOL. (Please make sure it fits within the 250mb upload limit - you may need to down convert it)
+3. Upload the highest resolution version of your group video to youtube and link to it from the README page of your group repository. 
+4. Download a snapshot of your repository from github ( zip) and upload this to SOL. Make sure it fits within the upload limit and that you remove and/or do not submit any jars or npm packages which are built by your project and  should be excluded from git by .gitignore.
+5. Also submit a single text file with the urls of your github repo, demo and video and the names of the people in your team.
+   
+In class, can you also MAKE SURE that the team details on the [github teams page](../Assessment/Teams.md)  are correct.
+This should contain the same team information as the submitted text file mentioned above. 
+

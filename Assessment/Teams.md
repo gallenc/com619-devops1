@@ -22,7 +22,7 @@
 |             |  Igor Kanchukovskyi       | IgorGrey  |             |                |             |             |
 |             | Hamza Mohibe |  HamzaMohibe  |             |                |             |             |
 |             |             |              |             |                |             |             |
-| Node Ninjas       | Gaetano Archer | GDoesCode     | 5archg31@solent.ac.uk             | https://github.com/GDoesCode/COM619DevOpsGroupWork   | https://github.com/users/GDoesCode/projects/1    |                    |
+| Node Ninjas       | Gaetano Archer | GDoesCode     | 5archg31@solent.ac.uk             | https://github.com/GDoesCode/COM619DevOpsGroupWork   | https://github.com/users/GDoesCode/projects/1    |  https://opennms1uksouthcloudazureapp.brazilsouth.cloudapp.azure.com:8080                 |
 |             | Jacob Shattock | jacob-shattock-solent  | 5shatj38@solent.ac.uk             |                |             |             |
 |             | Danial Agha | DAghaSolent       | 5aghad30@solent.ac.uk            |                |             |             |
 |             | Muhammad Sajid | AhubSajid       | 5shaim26@solent.ac.uk     |                |             |             |

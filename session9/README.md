@@ -1,3 +1,7 @@
+# Session 9 module wrapup exercise
+
+The [COM619-DevOpsWrapup2.0.pdf](../session9/COM619-DevOpsWrapup2.0.pdf) contains a wrap up exercise for the module.
+
 # Session 9  remote monitoring
 
 A basic level of monitoring can be achieved if you expose the nginx statistics and provide your lecturer with the  URL of your application. 

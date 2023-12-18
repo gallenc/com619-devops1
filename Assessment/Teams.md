@@ -25,7 +25,7 @@
 | Node Ninjas       | Gaetano Archer | GDoesCode     | 5archg31@solent.ac.uk             | https://github.com/GDoesCode/COM619DevOpsGroupWork   | https://github.com/users/GDoesCode/projects/1    |  https://opennms1uksouthcloudazureapp.brazilsouth.cloudapp.azure.com:8080                 |
 |             | Jacob Shattock | jacob-shattock-solent  | 5shatj38@solent.ac.uk             |                |             |             |
 |             | Danial Agha | DAghaSolent       | 5aghad30@solent.ac.uk            |                |             |             |
-|             | Muhammad Sajid | AhubSajid       | 5shaim26@solent.ac.uk     |                |             |             |
+|             | Muhammad Sajid | AhubSajid       | 5sajim26@solent.ac.uk.      |                |             |             |
 |             | Josh Clarke | JoshC98         | 5clarj31@solent.ac.uk            |                |             |             |
 |          |             |              |             |                |             |             |
 | Mongoose | Theodoros Christou  |   |        |  https://github.com/GoodH21/DevOps-Group  (not public) <br> https://github.com/GoodH21/com619-devops1                 | http://com619-mongeese.uksouth.cloudapp.azure.com:3000            |             |
